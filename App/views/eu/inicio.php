@@ -130,6 +130,41 @@
                     <a href="<?=$_ENV['RUTA']?>/eu/kontaktua" title="" class="boton">Lorem ipsum</a>
                 </div>
             </article>
+
+            <!-- artículo 4 -->
+            <article class="art04">
+                <h3>Gure artisauak</h3>
+                <span class="ralla"></span>
+                <div class="contenedor-fichas">
+                    <div class="ficha">
+                        <h4>Joseba Guette</h4>
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" title="">                        
+                        <p>Irinarekin negoziatzen dut eta orea hazteko konbentzitzen dut kexatu gabe. Ogi berriaren usaina baduzu, ziurrenik hemen egon naiz... eta bai, "egun on" esatea baino hobea naiz horretan.</p>
+                        <span class="ralla"></span>
+                    </div>
+
+                    <div class="ficha">
+                        <h4>Teresa Mingosho</h4>
+                        <img src="https://randomuser.me/api/portraits/women/27.jpg" alt="" title="">                        
+                        <p>Okin fidagarria eta azukre-hezitzaile ofiziala. Bizkotxo leun bat edo tarta bat ikusten baduzu, jateko goxoegia dirudiena, ziurrenik nik egina izango da... eta bai, txokolate "apur bat gehiago" ez gehitzea ere zaila egiten zait.</p>
+                        <span class="ralla"></span>
+                    </div>
+
+                    <div class="ficha">
+                        <h4>Eduardo Nuts</h4>
+                        <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="" title="">                        
+                        <p>Zulo perfektuak eta tentazio biribilak egiteko espezialista. Glaseatuaren usaina sumatzen baduzu, hemen egon naizelako da... eta borondate falta baduzu, ez kezkatu: nire donutek ere ez.</p>
+                        <span class="ralla"></span>
+                    </div>
+
+                    <div class="ficha">
+                        <h4>Karmela Citos</h4>
+                        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="" title="">                        
+                        <p>Gurinari zentzua ematen diot eta hostore kurruskariak zure eguna alaitzen du. Hozka egiten diozunean "krak" alai bat entzuten baduzu, nire errua da... eta lazoak desagertzen badira, ez dut ezer ikusi.</p>
+                        <span class="ralla"></span>
+                    </div>
+                </div>
+            </article>
         </section>
 
 

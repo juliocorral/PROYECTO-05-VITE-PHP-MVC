@@ -236,13 +236,93 @@
                 <a href="" class="boton">CTA</a>
             </article>
 
-            <!-- artículpo 06 -->
+            <!-- artículo 06 -->
             <article class="art06">
                 <div>
                     <h3>Artículo 06 Lorem ipsum dolor sit. </h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolorem soluta molestiae autem ipsam deleniti adipisci. Eius adipisci quo, quae officia quod rerum sequi, aliquid autem perspiciatis deleniti, laudantium nihil.</p>
                     <a href="#" title="" class="boton">CTA</a>
                 </div>     
+            </article>
+
+            <!-- artículo 07 -->
+            <article class="art07">
+                <h3>Encabezado Artículo 07</h3>
+
+                <img 
+                srcset="https://dummyimage.com/500x500 500w,
+                            https://dummyimage.com/1800x1100 1800w,
+                            https://dummyimage.com/2560x1200 2560w"
+
+                sizes="(width <= 800px) 600px,
+                        (width <= 1500px) 1200px,
+                        2560px"
+
+                src="https://dummyimage.com/500x500"
+                alt="" title="" />
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae deserunt velit ipsa facere laboriosam eum esse minus asperiores numquam quam. Magnam facilis veritatis eligendi illo culpa eaque ex. Ea, laboriosam natus. Odio sequi dolor nisi, aliquam eaque voluptatum aliquid error tempora molestias provident doloremque blanditiis numquam quas alias nostrum neque vel ipsam! Illo, accusantium maiores animi velit molestiae sed nesciunt eum sequi. Quo consectetur alias vel, debitis ab possimus tempora.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae deserunt velit ipsa facere laboriosam eum esse minus asperiores numquam quam. Magnam facilis veritatis eligendi illo culpa eaque ex. Ea, laboriosam natus.</p>
+
+                <a href="#" class="boton">CTA</a>
+            </article>
+
+            <!-- artículo 08 -->
+            <article class="art08">
+                <h3>Encabezado Artículo 08</h3>
+                <div>
+                    <div class="contenedor-lista">
+                        <h4>Lorem ipsum dolor sit.</h4>
+                        <ul>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contenedor-lista">
+                        <h4>Lorem ipsum dolor sit.</h4>
+                        <ul>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                            <li>
+                                <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/checkmark-circle.svg" alt="" title="" />
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </article>
 
             <!-- artForm -->

@@ -120,6 +120,40 @@
                 </div>
             </article>
 
+            <!-- artículo 4 -->
+            <article class="art04">
+                <h3>Nuestros artesanos</h3>
+                <span class="ralla"></span>
+                <div class="contenedor-fichas">
+                    <div class="ficha">
+                        <h4>Joseba Guette</h4>
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" title="">                        
+                        <p>Negocio con la harina y convenzo a la masa para que suba sin quejarse. Si hueles a pan recién hecho, probablemente he pasado por aquí… y sí, me sale mejor que el “buenos días”.</p>
+                        <span class="ralla"></span>
+                    </div>
+
+                    <div class="ficha">
+                        <h4>Teresa Mingosho</h4>
+                        <img src="https://randomuser.me/api/portraits/women/27.jpg" alt="" title="">                        
+                        <p>Pastelera de confianza y domadora oficial del azúcar. Si ves un bizcocho esponjoso o una tarta que parece demasiado bonita para comérsela, probablemente la he hecho yo… y sí, también me cuesta no darle “un toque más” de chocolate.</p>
+                        <span class="ralla"></span>
+                    </div>
+
+                    <div class="ficha">
+                        <h4>Eduardo Nuts</h4>
+                        <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="" title="">                        
+                        <p>Especialista en hacer agujeros perfectos y tentaciones redondas. Si hueles a glaseado, es que he pasado por aquí… y si te falta fuerza de voluntad, tranquilo: mis donuts tampoco tienen.</p>
+                        <span class="ralla"></span>
+                    </div>
+
+                    <div class="ficha">
+                        <h4>Karmela Citos</h4>
+                        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="" title="">                        
+                        <p>Hago que la mantequilla tenga sentido y que el hojaldre crujiente te arregle el día. Si oyes un “crac” feliz al morder, es obra mía… y si desaparecen los lacitos, yo no he visto nada.</p>
+                        <span class="ralla"></span>
+                    </div>
+                </div>
+            </article>
         </section>
 
         <!-- SECCIÓN PRODUCTOS -->

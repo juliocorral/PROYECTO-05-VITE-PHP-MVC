@@ -1,0 +1,118 @@
+@use 'config.scss' as c;
+
+.art08{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    padding: c.$padMin;
+    @media only screen and (min-width: c.$tablet){
+        width: 90%;
+        row-gap: 3rem;
+    }
+    @media only screen and (min-width: c.$desktop){
+        width: 60%;
+        row-gap: 4rem;
+    }
+
+    >div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 5rem;
+        @media only screen and (min-width: c.$tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            column-gap: 8rem;
+        }
+        @media only screen and (min-width: c.$tablet){
+            column-gap: 10rem;
+        }
+
+        .contenedor-lista{
+            padding: 1rem;
+            max-width: 500px;
+            background-color: c.$color00;
+            border-radius: 10px;
+            box-shadow: 0 0 15px c.$color01bis;
+            transition: .5s ease-in-out;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            row-gap: 1.5rem;
+            @media only screen and (min-width: c.$tablet){
+                border-radius: 15px;
+                padding: 2rem;
+            }
+
+            &:hover{
+                background-color: c.$color01;
+                transform: scale(1.05);
+                >:nth-child(1){
+                    color: c.$color00;
+                }
+                >ul li{
+                    img{
+                        filter: brightness(0) invert(1);
+                    }
+                    span {
+                        color: c.$color00;
+                    }
+                }
+            }
+
+            >:nth-child(1){
+                width: 100%; // Sin esto no funciona el text-align
+                text-align: left;
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 0.5rem;
+                @media only screen and (min-width: c.$tablet){
+                    row-gap: 0.75rem;
+                }
+                @media only screen and (min-width: c.$desktop){
+                    row-gap: 1rem;
+                }
+            
+                li{
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 0.5rem;
+                    font-family: c.$fuenteTextos;
+
+                    img{
+                        width: 20px;
+                        transition: 0.2s ease-in-out;
+                        filter: c.$color02;
+                        @media only screen and (min-width: c.$tablet){
+                            width: 25px;
+                        }
+                        @media only screen and (min-width: c.$desktop){
+                            width: 30px;
+                        }
+                    }
+                    span{
+                        transition: 0.2s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
