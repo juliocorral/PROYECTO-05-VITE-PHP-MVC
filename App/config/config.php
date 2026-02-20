@@ -3,7 +3,7 @@
 // Array de idiomas permitidos
 $langs = ['es', 'eu'];
 
-//Array asociativo (3 nieveles) para determinar las url permitidas y asociarles el recurso de la vista que corresponda
+//Array asociativo (3 niveles) para determinar las url permitidas y asociarles el recurso de la vista que corresponda
 $arrayRutasGet = [
     'es' => [
         '/es' => [
