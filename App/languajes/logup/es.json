@@ -1,0 +1,17 @@
+{
+  "meta_title": "Registro",
+  "meta_description": "Formulario de registro de usuarios.",
+  "hero_title": "Registro",
+  "label_nombre": "Nombre *",
+  "placeholder_nombre": "* Escribe tu nombre",
+  "label_correo": "Correo *",
+  "placeholder_correo": "* Escribe tu correo",
+  "label_password": "Contraseña *",
+  "placeholder_password": "Contraseña",
+  "label_password_repeat": "Repetir contraseña *",
+  "placeholder_password_repeat": "Repetir contraseña",
+  "label_terms_prefix": "Aceptar",
+  "label_terms_link": "términos y condiciones de privacidad",
+  "submit_text": "ENVIAR",
+  "required_fields_note": "* Campos obligatorios"
+}

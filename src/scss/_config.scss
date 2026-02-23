@@ -24,6 +24,7 @@
     font-family: 'Staatliches';
     src: url('/assets/fonts/Staatliches-Regular.ttf');
 }
+$tamanoFuente: clamp(1rem, 3vw, 1.1rem);
 
 // Variables del proyecto
 $fuenteTitulos:'Staatliches';
@@ -35,6 +36,7 @@ $color01bis:rgb(176, 176, 176);
 $color01bis2: rgba(0, 0, 0, 0.5);
 $color02: #d14d4d;
 $color03: rgb(122, 234, 198);
+$colorSVG: invert(14%) sepia(42%) saturate(788%) hue-rotate(14deg) brightness(92%) contrast(97%);
 
 
 $tablet: 800px;

@@ -98,6 +98,11 @@ if (isset($arrayRutasGet[$lang][$url])) {
 
     // Si la url existe dentro del array de url's, entonces cogemos el valor de view, que es el archivo que haremos include para cargar el contenido pertienente de esta url.
     $view = $arrayRutasGet[$lang][$url]['view']; 
+
+    // Obtenemos tambien la carpeta del contenido para esa vista que estará en JSON por idioma, luego con esos valores del JSON se completarán las variable de textos de la vista.
+    $content = $arrayRutasGet[$lang][$url]['content']; 
+    $data = (array) json_decode(file_get_contents($appRoot . "/languajes/$content/$lang.json"), true);
+    $data && extract($data); // (Cortocircuito) Extraemos las variables del JSON para que estén disponibles en la vista
      
     
     //----VISTA----------

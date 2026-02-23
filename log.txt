@@ -1,0 +1,6 @@
+2026-02-23 19:02:19 - modifica el archivo config.php de manera que a cada array de vistas se le añada al mismo nivel una variable content cuyo valor sea en cada caso el nombre simple de su view sin el .php hazlo tanto para el array es como el eu
+2026-02-23 19:03:44 - En estos mismos arrays en la variable view elimina los leguajes /es/ y /eu/ de las vistas
+2026-02-23 19:11:13 - Dentro de la carpeta languajes crea una subcarpeta con los nombres de cada vista del config
+2026-02-23 19:12:37 - Ahora dentro de cada una de esas subcarpetas crea dos json uno se llamará es.json y el otro eu.json
+2026-02-23 19:15:00 - Debes variabilizar los textos de cada uno de los archivos de cada vista y añadir cada variable en su archivo es.json correspondiente de su misma vista en languajes
+2026-02-23 19:18:34 - Debes variabilizar los textos de cada uno de los archivos de cada vista, NO LO HAGAS PARA templates.php y añadir cada variable en su archivo es.json correspondiente de su misma vista en languajes

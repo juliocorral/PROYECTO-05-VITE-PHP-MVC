@@ -1,0 +1,23 @@
+{
+  "meta_title": "Contacta con nosotros",
+  "meta_description": "Página de contacto de nuestra panadería en Aginaga",
+  "hero_title": "Estamos cerca de ti",
+  "section_h2": "Contacta",
+  "form_h3": "Formulario de contacto",
+  "error_field_type": "Hay un error en el campo %s de tipo %s",
+  "label_nombre": "Nombre *",
+  "placeholder_nombre": "* Escribe tu nombre",
+  "label_tel": "Teléfono",
+  "placeholder_tel": "Aquí tu teléfono",
+  "label_email": "Email *",
+  "placeholder_email": "* Correo electrónico",
+  "label_mensaje": "Comentarios",
+  "placeholder_mensaje": "Escribe aquí tu mensaje",
+  "error_terminos": "Para poder enviar una consulta, debes aceptar los términos",
+  "label_aceptar_prefix": "Aceptar",
+  "label_aceptar_link": "términos y condiciones de privacidad",
+  "error_captcha": "No has resuelto corréctamente el Captcha",
+  "captcha_label": "Resuelve:",
+  "submit_text": "ENVIAR",
+  "required_fields_note": "* Campos obligatorios"
+}

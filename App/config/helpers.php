@@ -3,6 +3,38 @@
 //comienzo de sesión, tenemos que ejecutarlo antes de crear y usar las variables de sesión.
 session_start();
 
+// Funciones de los formularios, para validar los campos y enviar errores al frontend
+function comprobarVacio($campo) {
+    // Comprobar si es vacío (TRUE) o no (FALSE)
+    return !isset($campo) || trim($campo) === '' || empty($campo);
+}
+
+function comprobarCaracteres($campo, $limiteMin, $limiteMax) {
+    // Comprobar si es valor es menor o mayor que el límite
+    if (strlen($campo) < $limiteMin || strlen($campo) > $limiteMax) {
+        return true; // Fuera de los límites
+    }
+    return false; // Dentro de los límites
+}
+
+function comprobarEmail($campo) {
+    // Expresión regular para validar el formato del correo electrónico
+    $regexpEmail = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+    return preg_match($regexpEmail, $campo);
+}
+
+function enviarError($mensajeError, $campo) {
+    // Crear un array de respuesta con el mensaje de error y el campo asociado
+    $arrayRespuesta = array(
+        "fallo" => true,
+        "mensaje" => $mensajeError,
+        "campo" => $campo
+    );
+
+    echo json_encode($arrayRespuesta);
+    die;
+}
+
 // Función para validar si un correo tiene la forma o estructura de un correo adecuada
 // La función devuelve true si es correcto, o false si no coincide con la expresión regular con la que se compara.
 function validar_email($valorRecibido) {    

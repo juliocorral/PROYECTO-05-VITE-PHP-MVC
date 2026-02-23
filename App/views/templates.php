@@ -325,6 +325,393 @@
                 </div>
             </article>
 
+            <!-- artículo 09 -->
+            <article class="art09">
+                <h3>Encabezado Artículo 09</h3>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi quo nulla reiciendis dolore, ipsam porro quisquam minima quae illum, suscipit officia, illo doloremque temporibus quos neque dolor unde! Quae consectetur vitae excepturi omnis qui, rem quos esse eum suscipit. Molestias quod quia dolore consequatur! Quos ut vel molestias sequi officiis.</p>
+
+                <div>
+                    <div class="ficha">
+                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/ribbon.svg" alt="" title="" />
+                        <h4>(h4) Beneficio 01</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit repudiandae explicabo accusantium tempore enim, ullam.</p>
+                    </div>
+                    <div class="ficha">
+                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/ribbon.svg" alt="" title="" />
+                        <h4>(h4) Beneficio 02</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit repudiandae explicabo accusantium tempore enim, ullam.</p>
+                    </div>
+                    <div class="ficha">
+                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/ribbon.svg" alt="" title="" />
+                        <h4>(h4) Beneficio 03</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit repudiandae explicabo accusantium tempore enim, ullam.</p>
+                    </div>
+                    <div class="ficha">
+                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/ribbon.svg" alt="" title="" />
+                        <h4>(h4) Beneficio 04</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit repudiandae explicabo accusantium tempore enim, ullam.</p>
+                    </div>
+                    <div class="ficha">
+                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/ribbon.svg" alt="" title="" />
+                        <h4>(h4) Beneficio 05</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit repudiandae explicabo accusantium tempore enim, ullam.</p>
+                    </div>
+                    <div class="ficha">
+                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/ribbon.svg" alt="" title="" />
+                        <h4>(h4) Beneficio 06</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugit repudiandae explicabo accusantium tempore enim, ullam.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- artículo 10 -->
+            <article class="art10">
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+                <div>
+                    <img src="https://dummyimage.com/900x900" alt="" title="" />
+                </div>
+            </article>
+
+            <!-- artículo 11 -->
+            <article class="art11">
+                <h3>Encabezado artículo 11</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eum blanditiis iste reprehenderit autem? Debitis est iure ipsa deserunt atque voluptates tenetur dolor vitae animi modi nulla, sint voluptatum dolore ducimus doloremque eos, repudiandae error provident pariatur autem? Illum molestias corporis vitae necessitatibus nihil error suscipit atque omnis pariatur maiores!</p>
+                                
+                <div>
+                    <div class="ficha">
+                        <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="" title="" />
+                        <div>
+                            <h4>(h5) Nombre Apellido</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, earum.</p>
+                            <a href="#" class="boton">Ver perfil</a>
+                        </div>
+                    </div>
+                    <div class="ficha">
+                        <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="" title="" />
+                        <div>
+                            <h4>(h5) Nombre Apellido</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem!</p>
+                            <a href="#" class="boton">Ver perfil</a>
+                        </div>
+                    </div>
+                    <div class="ficha">
+                        <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="" title="" />
+                        <div>
+                            <h4>(h5) Nombre Apellido</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem!</p>
+                            <a href="#" class="boton">Ver perfil</a>
+                        </div>
+                    </div>
+                    <div class="ficha">
+                        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="" title="" />
+                        <div>
+                            <h4>(h5) Nombre Apellido</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem!</p>
+                            <a href="#" class="boton">Ver perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- artículo 12 -->
+            <article class="art12">
+                <img srcset="https://dummyimage.com/500x500 500w,
+                                https://dummyimage.com/1800x1100 1800w,
+                                https://dummyimage.com/2560x1200 2560w"
+                
+                sizes="(width <= 800px) 600px,
+                        (width <= 1500px) 1200px,
+                        2560px"                    
+                
+                src="https://dummyimage.com/500x500" alt="" title="" />
+                <div>
+                    <h3>Encabezado Artículo 12</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias illum, ipsum recusandae quaerat eveniet vitae molestiae eos laboriosam voluptatibus eligendi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam aspernatur doloribus qui cumque assumenda ipsum excepturi vero molestias exercitationem distinctio, deserunt fugiat voluptate nesciunt sit beatae pariatur veritatis odio corporis!</p>
+                    <a href="#" class="boton">CTA</a>
+                </div>
+            </article>
+
+            <article class="art12 reverse">
+                <img srcset="https://dummyimage.com/500x500 500w,
+                                https://dummyimage.com/1800x1100 1800w,
+                                https://dummyimage.com/2560x1200 2560w"
+                
+                sizes="(width <= 800px) 600px,
+                        (width <= 1500px) 1200px,
+                        2560px"                    
+                
+                src="https://dummyimage.com/500x500" alt="" title="" />
+                <div>
+                    <h3>Encabezado Artículo 12</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias illum, ipsum recusandae quaerat eveniet vitae molestiae eos laboriosam voluptatibus eligendi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam aspernatur doloribus qui cumque assumenda ipsum excepturi vero molestias exercitationem distinctio, deserunt fugiat voluptate nesciunt sit beatae pariatur veritatis odio corporis!</p>
+                    <a href="#" class="boton">CTA</a>
+                </div>
+            </article>
+
+            <article class="art12">
+                <img srcset="https://dummyimage.com/500x500 500w,
+                                https://dummyimage.com/1800x1100 1800w,
+                                https://dummyimage.com/2560x1200 2560w"
+                
+                sizes="(width <= 800px) 600px,
+                        (width <= 1500px) 1200px,
+                        2560px"                    
+                
+                src="https://dummyimage.com/500x500" alt="" title="" />
+                <div>
+                    <h3>Encabezado Artículo 12</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias illum, ipsum recusandae quaerat eveniet vitae molestiae eos laboriosam voluptatibus eligendi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam aspernatur doloribus qui cumque assumenda ipsum excepturi vero molestias exercitationem distinctio, deserunt fugiat voluptate nesciunt sit beatae pariatur veritatis odio corporis!</p>
+                    <a href="#" class="boton">CTA</a>
+                </div>
+            </article>
+
+            <!-- Contacto -->
+            <!-- Formulario con envío por PHP -->
+            <section id="artform01">
+                <h2>Formulario PHP</h2>
+
+                <article class="artform01">
+                    <?php
+                    // Comprobar si hay variables en la URL
+                    // Si hay un variables de error en la URL, mostrar mensaje de error encima del input del tipo de error
+                    if (isset($_GET['error'])) {
+                        $error = htmlspecialchars($_GET['error']);
+                        $campo = isset($_GET['campo']) ? htmlspecialchars($_GET['campo']) : '';  
+                    }
+
+                    $nombre = isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : '';
+                    $telefono = isset($_GET['telefono']) ? htmlspecialchars($_GET['telefono']) : '';
+                    $email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : '';  
+                    $mensaje = isset($_GET['mensaje']) ? nl2br(htmlspecialchars($_GET['mensaje'])) : ''; 
+                    ?>
+
+                    <h3>Encabezado Formulario PHPMailer</h3>
+                    <div>
+                        <div class="contenedor-form">
+                            <?php
+                            if (!isset($_GET['error']) && isset($_GET['nombre'])) { ?>
+                                <h4>Solicitud enviada correctamente, gracias por contactarnos <?=$nombre?>.</h4> 
+                                <?php
+                                $nombre = '';
+                            } ?>
+                            <form action="<?=base_path()?>/app/artform01.php" method="post" id="idForm">
+                                <?php
+                                if (isset($error)) { ?>
+                                    <p class="error">Error en el campo: <?=$campo?> de tipo: <?=$error?></p>
+                                <?php }
+                                ?>
+
+                                <!-- nombre -->
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="30" placeholder="Introduce nombre y apellido" value="<?=$nombre?>" required />
+                                
+                                <!-- teléfono -->
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" name="telefono" id="telefono" placeholder="Introduce nº móvil" value="<?=$telefono?>" required />
+                                
+                                <!-- email -->
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" name="email" id="email" placeholder="Introduce email" value="<?=$email?>" />
+                                
+                                <!-- mensaje -->
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea name="mensaje" id="mensaje" rows="7" placeholder="Introduce comentario" required><?=$mensaje?></textarea>
+                                
+                                <!-- aceptar términos -->
+                                <div class="horizontal">
+                                    <label for="aceptar">Aceptar términos y condiciones de privacidad *</label>
+                                    <input type="checkbox" name="aceptar" id="aceptar" />
+                                </div>
+                                
+                                <!-- captcha -->
+                                <label for="captcha">Resuelve</label>
+                                <div class="horizontal">
+                                    <span id="num1">3</span>
+                                    <span id="operacion">+</span>
+                                    <span id="num2">8</span>
+                                    <input type="text" name="respuesta" placeholder="Respuesta" id="respuesta" required />
+                                    <!-- Respuesta calculada OCULTA -->
+                                    <input type="hidden" name="respSystem" id="respSystem" value="" />
+                                </div>
+                                
+                                <!-- enviar -->
+                                <input type="submit" value="Enviar" class="btn-enviar" />
+                            </form>
+                        </div>
+
+                        <div class="contenedor-info">
+                            <ul>
+                                <li>
+                                    <a href="tel:+34943001002">
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/call.svg" alt="" title="" />
+                                        <span>+34 943 001 002</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@panaderia.com" target="_blank">
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/mail.svg" alt="" title="" />
+                                        <span>info@panaderia.com</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/677001002" target="_blank">
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/logo-whatsapp.svg" alt="" title="" />
+                                        <span>677001001</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://maps.app.goo.gl/WDpiQwbN6gNkuW1NA" target="_blank" >
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/location.svg" alt="" title="" class="icono-mapa" />
+                                        <span><strong>Área Escuela de Diseño y Nuevas Tecnologías</strong><br>C/ Juan Fermín, Juan F. Gilisagasti Kalea, 4, 1º<br>20018 Donostia / San Sebastián<br>Gipuzkoa</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46473.427156890815!2d-1.9325749123229952!3d43.280981418388954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b013f0513629%3A0x57e4ff3311f619d9!2s%C3%81rea%20Escuela%20de%20Dise%C3%B1o%20y%20Nuevas%20Tecnolog%C3%ADas!5e0!3m2!1ses!2ses!4v1768585015247!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Formulario con envío por XMLHTTPRequest (Ajax) -->
+            <section id="artform02">
+                <h2>Formulario JS</h2>
+
+                <article class="artform02">
+
+                    <h3>Encabezado Formulario FETCH API</h3>
+                    <div>
+                        <div class="contenedor-form">
+
+                            <div id="modalEnvioOk" class="modal-envio-ok">
+                                <div class="modal-content">
+                                    <h3>¡Formulario enviado correctamente!</h3>
+                                    <p id="mensajeOk"></p>
+                                    <a href="#artform02" class="boton" id="btnMostrarFormulario">Volver</a>
+                                </div>
+                            </div>
+
+                            <form id="idFormAjax">
+                                <p class="error" id="errorAjax"></p>
+
+                                <!-- nombre -->
+                                <label for="nombreAjax">Nombre *</label>
+                                <input type="text" name="nombre" id="nombreAjax" minlength="3" maxlength="30" placeholder="Introduce nombre y apellido" />
+                                
+                                <!-- teléfono -->
+                                <label for="telefonoAjax">Teléfono *</label>
+                                <input type="tel" name="telefono" id="telefonoAjax" placeholder="Introduce nº móvil" />
+                                
+                                <!-- email -->
+                                <label for="emailAjax">Correo electrónico</label>
+                                <input type="email" name="email" id="emailAjax" placeholder="Introduce email" />
+                                
+                                <!-- mensaje -->
+                                <label for="mensajeAjax">Mensaje *</label>
+                                <textarea name="mensaje" id="mensajeAjax" rows="7" placeholder="Introduce comentario"></textarea>
+                                
+                                <!-- aceptar términos -->
+                                 <div class="horizontal">
+                                    <label for="aceptarAjax">Aceptar términos y condiciones de privacidad *</label>
+                                    <input type="checkbox" name="aceptar" id="aceptarAjax" />
+                                </div>
+                                
+                                <!-- captcha -->
+                                <label for="captchaAjax">Resuelve</label>
+                                <div class="horizontal">
+                                    <span id="num1Ajax">3</span>
+                                    <span id="operacionAjax">+</span>
+                                    <span id="num2Ajax">8</span>
+                                    <input type="text" name="respuesta" placeholder="Respuesta" id="respuestaAjax" />
+                                    <!-- Respuesta calculada OCULTA -->
+                                    <input type="hidden" name="respSystem" id="respSystemAjax" value="" />
+                                </div>
+                                
+                                <!-- enviar -->
+                                <input type="submit" value="Enviar" class="btn-enviar" id="btnEnviarAjax" />
+                            </form>
+
+                            <!-- Loader -->
+                            <div class="moduleloader01" id="moduleloader01">
+                                <svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                                    <circle fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
+                                    <line fill="none" stroke-linecap="round" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+                                    <animateTransform 
+                                        attributeName="transform" 
+                                        dur="2s"
+                                        type="rotate"
+                                        from="0 50 50"
+                                        to="360 50 50"
+                                        repeatCount="indefinite" />
+                                    </line>
+                                    <line fill="none" stroke-linecap="round" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+                                    <animateTransform 
+                                        attributeName="transform" 
+                                        dur="15s"
+                                        type="rotate"
+                                        from="0 50 50"
+                                        to="360 50 50"
+                                        repeatCount="indefinite" />
+                                    </line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contenedor-info">
+                            <ul>
+                                <li>
+                                    <a href="tel:+34943001002">
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/call.svg" alt="" title="" />
+                                        <span>+34 943 001 002</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@panaderia.com" target="_blank">
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/mail.svg" alt="" title="" />
+                                        <span>info@panaderia.com</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wa.me/677001002" target="_blank">
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/logo-whatsapp.svg" alt="" title="" />
+                                        <span>677001001</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://maps.app.goo.gl/WDpiQwbN6gNkuW1NA" target="_blank" >
+                                        <img src="<?= $_ENV['RUTA'] ?>/assets/img/system/location.svg" alt="" title="" class="icono-mapa" />
+                                        <span><strong>Área Escuela de Diseño y Nuevas Tecnologías</strong><br>C/ Juan Fermín, Juan F. Gilisagasti Kalea, 4, 1º<br>20018 Donostia / San Sebastián<br>Gipuzkoa</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46473.427156890815!2d-1.9325749123229952!3d43.280981418388954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b013f0513629%3A0x57e4ff3311f619d9!2s%C3%81rea%20Escuela%20de%20Dise%C3%B1o%20y%20Nuevas%20Tecnolog%C3%ADas!5e0!3m2!1ses!2ses!4v1768585015247!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
             <!-- artForm -->
             <article class="artForm">
                 <h3>Formulario de contacto</h3>
