@@ -52,7 +52,7 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
     <?php echo vite_tags('src/js/views/zonaAdmin.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es/zona-admin">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
  
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -120,7 +120,7 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
 
                     <p><?= $data['required_fields_note'] ?></p>
 
-                    <a href="<?=$_ENV['RUTA']?>/es/registro"><?= $data['register_link_text'] ?></a>
+                    <a href="<?=$_ENV['RUTA'] . $data['route_registro'] ?>"><?= $data['register_link_text'] ?></a>
 
                 </form>
             </article>

@@ -10,7 +10,7 @@
     <?php echo vite_tags('src/js/views/gracias.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es/gracias">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -47,7 +47,7 @@
         <div>            
             <img src="<?=$_ENV['RUTA']?>/assets/img/logos/panaderia-aginaga-logo.svg" alt="<?= $data['logo_alt'] ?>" title="<?= $data['logo_title'] ?>">
         </div>
-        <a href="<?=$_ENV['RUTA']?>/es" class="boton" title="<?= $data['cta_title'] ?>"><?= $data['cta_text'] ?></a>     
+        <a href="<?=$_ENV['RUTA'] . $data['route_inicio'] ?>" class="boton" title="<?= $data['cta_title'] ?>"><?= $data['cta_text'] ?></a>     
     </header>
 
     <!-- FOOTER -->

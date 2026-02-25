@@ -8,7 +8,7 @@
     <?php echo vite_tags('src/js/views/inicio.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -36,7 +36,7 @@
         <div>
             <img src="<?=$_ENV['RUTA']?>/assets/img/logos/panaderia-aginaga-logo.svg" alt="">
         </div>
-        <a href="<?=$_ENV['RUTA']?>/es/contacto" class="boton"><?= $data['hero_cta_text'] ?></a>
+        <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" class="boton"><?= $data['hero_cta_text'] ?></a>
     </header>
 
     <main>
@@ -58,7 +58,7 @@
                             <img src="<?=$_ENV['RUTA']?>/assets/img/system/people-outline.svg" alt="">
                             <h4><?= $data['card_1_h4'] ?></h4>
                             <p><?= $data['card_1_p'] ?></p>
-                            <a href="<?=$_ENV['RUTA']?>/es/sobre-nosotros" class="moduloBoton01">
+                            <a href="<?=$_ENV['RUTA'] . $data['route_quienes_somos'] ?>" class="moduloBoton01">
                                 <span><?= $data['card_1_cta_text'] ?></span>
                                 <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="" title="">
                             </a>
@@ -67,13 +67,13 @@
                             <img src="<?=$_ENV['RUTA']?>/assets/img/system/star-outline.svg" alt="">
                             <h4><?= $data['card_2_h4'] ?></h4>
                             <p><?= $data['card_2_p'] ?></p>
-                            <a href="<?=$_ENV['RUTA']?>/es/productos" class="moduloBoton01">
+                            <a href="<?=$_ENV['RUTA'] . $data['route_productos'] ?>" class="moduloBoton01">
                                 <span><?= $data['card_2_cta_text'] ?></span>
                                 <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="" title="">
                             </a>
                         </div>
                     </div>
-                    <a href="<?=$_ENV['RUTA']?>/es/contacto" class="moduloBoton02">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" class="moduloBoton02">
                         <span><?= $data['presentacion_cta_text'] ?></span>
                         <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="<?= $data['presentacion_cta_icon_alt'] ?>" title="<?= $data['presentacion_cta_icon_title'] ?>">
                     </a>
@@ -107,7 +107,7 @@
                 <h3><?= $data['sobre_art05_h3'] ?></h3>
                 <p><?= $data['sobre_art05_p1'] ?></p>
                 <p><?= $data['sobre_art05_p2'] ?></p>
-                <a href="<?=$_ENV['RUTA']?>/es/sobre-nosotros" class="boton"><?= $data['sobre_art05_cta_text'] ?></a>
+                <a href="<?=$_ENV['RUTA'] . $data['route_quienes_somos'] ?>" class="boton"><?= $data['sobre_art05_cta_text'] ?></a>
             </article>
 
             <!-- artículo 06 -->
@@ -116,7 +116,7 @@
                     <h3><?= $data['sobre_art06_h3'] ?></h3>
                     <p><?= $data['sobre_art06_p1'] ?></p>
                     <p><?= $data['sobre_art06_p2'] ?></p>
-                    <a href="<?=$_ENV['RUTA']?>/es/contacto" title="" class="boton"><?= $data['sobre_art06_cta_text'] ?></a>
+                    <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" title="" class="boton"><?= $data['sobre_art06_cta_text'] ?></a>
                 </div>
             </article>
 
@@ -168,22 +168,22 @@
                 <div class="textos">
                     <h3><?= $data['productos_art02_h3'] ?></h3>
                     <p><?= $data['productos_art02_p'] ?></p>
-                    <a href="<?=$_ENV['RUTA']?>/es/productos" class="moduloBoton02">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_productos'] ?>" class="moduloBoton02">
                         <span><?= $data['productos_art02_cta_text'] ?></span>
                         <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="<?= $data['productos_art02_cta_icon_alt'] ?>" title="<?= $data['productos_art02_cta_icon_title'] ?>">
                     </a>
                 </div>
 
                 <div class="imagenes">
-                    <a href="<?=$_ENV['RUTA']?>/es/productos#hitoPanes" title="<?= $data['productos_item_1_link_title'] ?>">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_productos_hito_panes'] ?>" title="<?= $data['productos_item_1_link_title'] ?>">
                         <img src="<?=$_ENV['RUTA']?>/assets/img/vistas/inicio/amplio-surtido-panes-1200.avif" alt="<?= $data['productos_item_1_img_alt'] ?>" title="<?= $data['productos_item_1_img_title'] ?>">
                         <h4><?= $data['productos_item_1_h4'] ?></h4>
                     </a>
-                    <a href="<?=$_ENV['RUTA']?>/es/productos#hitoPasteles" title="<?= $data['productos_item_2_link_title'] ?>">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_productos_hito_pasteles'] ?>" title="<?= $data['productos_item_2_link_title'] ?>">
                         <img src="<?=$_ENV['RUTA']?>/assets/img/vistas/inicio/amplio-surtido-pasteles-1200.avif" alt="<?= $data['productos_item_2_img_alt'] ?>" title="<?= $data['productos_item_2_img_title'] ?>">
                         <h4><?= $data['productos_item_2_h4'] ?></h4>
                     </a>
-                    <a href="<?=$_ENV['RUTA']?>/es/productos#hitoTorrijas" title="<?= $data['productos_item_3_link_title'] ?>">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_productos_hito_torrijas'] ?>" title="<?= $data['productos_item_3_link_title'] ?>">
                         <img src="<?=$_ENV['RUTA']?>/assets/img/vistas/inicio/las-mejores-torrijas-de-gipuzkoa1200.avif" alt="<?= $data['productos_item_3_img_alt'] ?>" title="<?= $data['productos_item_3_img_title'] ?>">
                         <h4><?= $data['productos_item_3_h4'] ?></h4>
                     </a>

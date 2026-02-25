@@ -8,7 +8,7 @@
     <?php echo vite_tags('src/js/views/quienesSomos.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es/sobre-nosotros">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -50,7 +50,7 @@
                 <h3><?= $data['presentacion_h3'] ?></h3>
                 <p><?= $data['presentacion_p1'] ?></p>
                 <p><?= $data['presentacion_p2'] ?></p>
-                <a href="<?=$_ENV['RUTA']?>/es/contacto" class="boton" title="<?= $data['presentacion_cta_title'] ?>"><?= $data['presentacion_cta_text'] ?></a>
+                <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" class="boton" title="<?= $data['presentacion_cta_title'] ?>"><?= $data['presentacion_cta_text'] ?></a>
             </article>
 
             <!-- TRATO DISTINGUIDO Y PERSONAL -->
@@ -125,13 +125,13 @@
                             <img src="<?=$_ENV['RUTA']?>/assets/img/system/ribbon.svg" alt="<?= $data['card_2_icon_alt'] ?>" title="<?= $data['card_2_icon_title'] ?>">
                             <h4><?= $data['card_2_h4'] ?></h4>
                             <p><?= $data['card_2_p'] ?></p>
-                            <a href="<?=$_ENV['RUTA']?>/es/productos" class="moduloBoton01">
+                            <a href="<?=$_ENV['RUTA'] . $data['route_productos'] ?>" class="moduloBoton01">
                                 <span><?= $data['card_2_cta_text'] ?></span>
                                 <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="" title="">
                             </a>
                         </div>
                     </div>
-                    <a href="<?=$_ENV['RUTA']?>/es/contacto" class="moduloBoton02">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" class="moduloBoton02">
                         <span><?= $data['historia_cta_text'] ?></span>
                         <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="<?= $data['historia_cta_icon_alt'] ?>" title="">
                     </a>

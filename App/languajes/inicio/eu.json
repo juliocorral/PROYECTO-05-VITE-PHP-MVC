@@ -1,6 +1,13 @@
 {
   "meta_title": "Aginagako Okindegia | Ogi eta gozogintza artisau lantegia",
   "meta_description": "Aginagako artisau okindegia eta gozotegia 1925etik. Ezagutu gure taldea, aurkitu gure produktuak eta gozatu bisita bakoitzean tratu hurbilaz.",
+  "route_canonical": "/eu",
+  "route_contacto": "/eu/kontaktua",
+  "route_quienes_somos": "/eu/guri-buruz",
+  "route_productos": "/eu/produktuak",
+  "route_productos_hito_panes": "/eu/produktuak#hitoPanes",
+  "route_productos_hito_pasteles": "/eu/produktuak#hitoPasteles",
+  "route_productos_hito_torrijas": "/eu/produktuak#hitoTorrijas",
   "hero_title": "Aginagako Okindegia, artisau tradizioa 1925etik",
   "hero_cta_text": "Egin zure eskaera",
   "presentacion_h2": "Ogia, pastelak eta hurbiltasuna Aginagan",

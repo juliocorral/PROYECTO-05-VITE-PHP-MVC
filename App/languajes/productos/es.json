@@ -1,8 +1,10 @@
 {
   "meta_title": "Nuestros productos panaderos",
   "meta_description": "Descubre panes, pasteles y torrijas artesanas elaborados cada día en Panadería Aginaga.",
+  "route_canonical": "/es/productos",
+  "route_contacto": "/es/contacto",
   "hero_title": "Los mejores productos en tu mesa",
-  "hero_cta_text": "CTA",
+  "hero_cta_text": "Haz tu pedido",
   "intro_h2": "Elaboramos cada día productos 100% artesanos",
   "intro_h3": "Pan, dulces y especialidades con sello propio",
   "intro_p1": "En Panadería Aginaga trabajamos cada día para ofrecer productos que respetan la tradición y realzan el sabor auténtico de nuestra tierra. Seleccionamos ingredientes de primera calidad y seguimos procesos artesanales que nos han acompañado durante generaciones.",

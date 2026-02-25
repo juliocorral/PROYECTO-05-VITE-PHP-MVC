@@ -1,6 +1,8 @@
 {
   "meta_title": "Registro",
   "meta_description": "Formulario de registro de usuarios.",
+  "route_canonical": "/es/registro",
+  "route_terminos": "/es/terminos-legales",
   "hero_title": "Registro",
   "label_nombre": "Nombre *",
   "placeholder_nombre": "* Escribe tu nombre",

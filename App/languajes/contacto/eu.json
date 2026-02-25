@@ -1,6 +1,8 @@
 {
   "meta_title": "Jarri gurekin harremanetan",
   "meta_description": "Gure Aginagako okindegiaren kontaktu orria",
+  "route_canonical": "/eu/kontaktua",
+  "route_terminos": "/eu/legezko-terminoak",
   "hero_title": "Zugandik gertu gaude",
   "section_h2": "Kontaktua",
   "form_h3": "Kontaktu formularioa",

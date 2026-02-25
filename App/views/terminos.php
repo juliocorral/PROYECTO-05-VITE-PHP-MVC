@@ -7,7 +7,7 @@
     <?php echo vite_tags('src/js/views/terminos.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es/terminos-legales">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -37,7 +37,7 @@
         <div>            
             <img src="<?=$_ENV['RUTA']?>/assets/img/logos/panaderia-aginaga-logo.svg" alt="<?= $data['hero_logo_alt'] ?>" title="<?= $data['hero_logo_title'] ?>">
         </div>
-        <a href="<?=$_ENV['RUTA']?>/es" class="boton" title="<?= $data['hero_cta_title'] ?>"><?= $data['hero_cta_text'] ?></a>     
+        <a href="<?=$_ENV['RUTA'] . $data['route_inicio'] ?>" class="boton" title="<?= $data['hero_cta_title'] ?>"><?= $data['hero_cta_text'] ?></a>     
     </header>
 
     <!-- TODO: COMPLETAR LAS VARIABLES Y VARIABILIZAR EL CONTENIDO -->

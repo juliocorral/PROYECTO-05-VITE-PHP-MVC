@@ -123,6 +123,17 @@ if (isset($arrayRutasGet[$lang][$url])) {
     if (!in_array($lang, $langs)) {
         $lang = $_ENV['LANG_DEFAULT'];
     }
+    // Cargamos variables globales también para el 404 (nav/footer)
+    $data = (array) json_decode(file_get_contents($appRoot . "/languajes/_global/$lang.json"), true);
+    $data && extract($data);
+
+    // Cargamos variables de la vista 404
+    $notFoundLangFile = $appRoot . "/languajes/404/$lang.json";
+    if (is_file($notFoundLangFile)) {
+        $data = (array) json_decode(file_get_contents($notFoundLangFile), true);
+        $data && extract($data);
+    }
+
     http_response_code(404);
     require_once $appRoot . "/views/$lang/404.php";
 

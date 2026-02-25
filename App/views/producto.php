@@ -90,7 +90,7 @@ mysqli_close($con); //cerrando la conexión a la BBDD
         <div>            
             <img src="<?=$_ENV['RUTA']?>/assets/img/logos/panaderia-aginaga-logo.svg" alt="">
         </div>
-        <a href="<?=$_ENV['RUTA']?>/es/contacto" class="boton"><?= $data['hero_cta_text'] ?></a>
+        <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" class="boton"><?= $data['hero_cta_text'] ?></a>
 
         <img src="<?=$srcImg1?>" alt="<?=$altImg1?>" title="<?=$titleImg1?>" >
 
@@ -107,7 +107,7 @@ mysqli_close($con); //cerrando la conexión a la BBDD
                     <p><?=$parrafo1?></p>
                     <p><?=$parrafo2?></p>
                     <!-- <a href="" class="boton">CTA</a> -->
-                    <a href="<?=$_ENV['RUTA']?>/es/contacto" class="moduloBoton02">
+                    <a href="<?=$_ENV['RUTA'] . $data['route_contacto'] ?>" class="moduloBoton02">
                         <span><?= $data['section_cta_text'] ?></span>
                         <img src="<?=$_ENV['RUTA']?>/assets/img/system/arrow-forward-outline.svg" alt="<?= $data['section_cta_icon_alt'] ?>" title="<?= $data['section_cta_icon_title'] ?>">
                     </a>

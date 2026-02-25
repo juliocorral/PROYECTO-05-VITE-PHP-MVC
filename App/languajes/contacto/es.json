@@ -1,6 +1,8 @@
 {
   "meta_title": "Contacta con nosotros",
   "meta_description": "Página de contacto de nuestra panadería en Aginaga",
+  "route_canonical": "/es/contacto",
+  "route_terminos": "/es/terminos-legales",
   "hero_title": "Estamos cerca de ti",
   "section_h2": "Contacta",
   "form_h3": "Formulario de contacto",

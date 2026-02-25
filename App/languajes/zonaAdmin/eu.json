@@ -2,6 +2,8 @@
   "db_error_fetch": "Ezin izan dira zure kontsultak berreskuratu.",
   "db_error_prepare": "Ezin izan da kontsulta prestatu.",
   "db_error_connection": "Ezin izan da datu-basera konektatu.",
+  "route_canonical": "/eu/admin-gunea",
+  "route_registro": "/eu/erregistroa",
   "meta_title": "Admin Gunea",
   "meta_description": "Bidalitako kontsultak berrikusteko gune pribaturako sarbidea.",
   "hero_title": "Gune pribaturako sarbidea",

@@ -1,8 +1,10 @@
 {
   "meta_title": "Gure okindegiko produktuak",
   "meta_description": "Ezagutu Aginagako Okindegian egunero egindako ogi, pastel eta torrija artisauak.",
+  "route_canonical": "/eu/produktuak",
+  "route_contacto": "/eu/kontaktua",
   "hero_title": "Produktu onenak zure mahaian",
-  "hero_cta_text": "CTA",
+  "hero_cta_text": "Egin zure eskaera",
   "intro_h2": "Egunero %100 artisau produktuak egiten ditugu",
   "intro_h3": "Ogia, gozoak eta nortasun propiodun espezialitateak",
   "intro_p1": "Aginagako Okindegian egunero lan egiten dugu tradizioa errespetatzen duten eta gure lurreko zapore benetakoa nabarmentzen duten produktuak eskaintzeko. Lehen mailako osagaiak hautatzen ditugu eta belaunaldiz belaunaldi lagundu gaituzten artisau-prozesuak jarraitzen ditugu.",

@@ -1,6 +1,8 @@
 {
   "meta_title": "Erregistroa",
   "meta_description": "Erabiltzaileen erregistro formularioa.",
+  "route_canonical": "/eu/erregistroa",
+  "route_terminos": "/eu/legezko-terminoak",
   "hero_title": "Erregistroa",
   "label_nombre": "Izena *",
   "placeholder_nombre": "* Idatzi zure izena",

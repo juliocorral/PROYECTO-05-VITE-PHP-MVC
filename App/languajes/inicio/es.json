@@ -1,6 +1,13 @@
 {
   "meta_title": "Panadería Aginaga | Obrador de pan y pastelería artesanal",
   "meta_description": "Panadería y pastelería artesanal en Aginaga desde 1925. Conoce a nuestro equipo, descubre nuestros productos y disfruta de un trato cercano en cada visita.",
+  "route_canonical": "/es",
+  "route_contacto": "/es/contacto",
+  "route_quienes_somos": "/es/sobre-nosotros",
+  "route_productos": "/es/productos",
+  "route_productos_hito_panes": "/es/productos#hitoPanes",
+  "route_productos_hito_pasteles": "/es/productos#hitoPasteles",
+  "route_productos_hito_torrijas": "/es/productos#hitoTorrijas",
   "hero_title": "Panadería Aginaga, tradición artesanal desde 1925",
   "hero_cta_text": "Haz tu pedido",
   "presentacion_h2": "Pan, pasteles y cercanía en Aginaga",

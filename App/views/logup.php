@@ -8,7 +8,7 @@
     <?php echo vite_tags('src/js/views/zonaAdmin.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es/registro">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -66,7 +66,7 @@
 
                 <div>
                     <input type="checkbox" name="terminos" id="aceptarTerminos">                        
-                    <labelfor="aceptarTerminos"><?= $data['label_terms_prefix'] ?> <a href="<?=$_ENV['RUTA']?>/es/terminos-legales"><?= $data['label_terms_link'] ?></a></label>
+                    <labelfor="aceptarTerminos"><?= $data['label_terms_prefix'] ?> <a href="<?=$_ENV['RUTA'] . $data['route_terminos'] ?>"><?= $data['label_terms_link'] ?></a></label>
                 </div>
 
                 <!-- input oculto donde el value es el valor de $lang, ergo el idioma -->

@@ -10,7 +10,7 @@
     <?php echo vite_tags('src/js/views/contacto.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA']?>/es/contacto">
+    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
@@ -92,7 +92,7 @@
                     <span class="error"><?php if( isset($campo) && $campo == "terminos"){echo $data['error_terminos'];} ?></span>
                     <div>
                         <input type="checkbox" name="terminos" id="aceptarTerminos">                        
-                        <label for="aceptarTerminos"><?= $data['label_aceptar_prefix'] ?> <a href="<?=$_ENV['RUTA']?>/es/terminos-legales"><?= $data['label_aceptar_link'] ?></a></label>
+                        <label for="aceptarTerminos"><?= $data['label_aceptar_prefix'] ?> <a href="<?=$_ENV['RUTA'] . $data['route_terminos'] ?>"><?= $data['label_aceptar_link'] ?></a></label>
                     </div>
 
                     <!-- CAPTCHA -->

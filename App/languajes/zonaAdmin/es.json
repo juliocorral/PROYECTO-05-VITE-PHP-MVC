@@ -2,6 +2,8 @@
   "db_error_fetch": "No se han podido recuperar tus consultas.",
   "db_error_prepare": "No se ha podido preparar la consulta.",
   "db_error_connection": "No se ha podido conectar con la base de datos.",
+  "route_canonical": "/es/zona-admin",
+  "route_registro": "/es/registro",
   "meta_title": "Zona Admin",
   "meta_description": "Acceso a la zona privada para revisar consultas enviadas.",
   "hero_title": "Acceso Zona privada",
