@@ -135,7 +135,7 @@ if (isset($arrayRutasGet[$lang][$url])) {
     }
 
     http_response_code(404);
-    require_once $appRoot . "/views/$lang/404.php";
+    require_once $appRoot . "/views/404.php";
 
     /* 
     AQUÍ SE CARGARÁ TODO EL HTML DEL 404
