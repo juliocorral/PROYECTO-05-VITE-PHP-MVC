@@ -1,0 +1,17 @@
+{
+  "meta_title": "Erregistroa",
+  "meta_description": "Erabiltzaileen erregistro formularioa.",
+  "hero_title": "Erregistroa",
+  "label_nombre": "Izena *",
+  "placeholder_nombre": "* Idatzi zure izena",
+  "label_correo": "Posta elektronikoa *",
+  "placeholder_correo": "* Idatzi zure posta",
+  "label_password": "Pasahitza *",
+  "placeholder_password": "Pasahitza",
+  "label_password_repeat": "Errepikatu pasahitza *",
+  "placeholder_password_repeat": "Errepikatu pasahitza",
+  "label_terms_prefix": "Onartu",
+  "label_terms_link": "pribatutasunaren terminoak eta baldintzak",
+  "submit_text": "BIDALI",
+  "required_fields_note": "* Nahitaezko eremuak"
+}

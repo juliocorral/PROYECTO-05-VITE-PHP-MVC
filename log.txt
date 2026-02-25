@@ -4,3 +4,4 @@
 2026-02-23 19:12:37 - Ahora dentro de cada una de esas subcarpetas crea dos json uno se llamará es.json y el otro eu.json
 2026-02-23 19:15:00 - Debes variabilizar los textos de cada uno de los archivos de cada vista y añadir cada variable en su archivo es.json correspondiente de su misma vista en languajes
 2026-02-23 19:18:34 - Debes variabilizar los textos de cada uno de los archivos de cada vista, NO LO HAGAS PARA templates.php y añadir cada variable en su archivo es.json correspondiente de su misma vista en languajes
+2026-02-25 17:09:18 - Añade ahora a cada JSON eu de cada vistas las mismas variables del JSON es de esa misma vista pero con los textos valor traducidos a Euskara
