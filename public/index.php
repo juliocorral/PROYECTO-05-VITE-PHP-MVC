@@ -55,9 +55,6 @@ if ($method === 'POST') {
 }
 
 
-
-
-
 // Compruebo que $url no sea un "/", sino que sea otras url como "/es/contacto"
 if ($url != "/") {
     // quito la "/" del final en caso de que la tenga
@@ -101,6 +98,12 @@ if (isset($arrayRutasGet[$lang][$url])) {
 
     // Obtenemos tambien la carpeta del contenido para esa vista que estará en JSON por idioma, luego con esos valores del JSON se completarán las variable de textos de la vista.
     $content = $arrayRutasGet[$lang][$url]['content']; 
+
+    // Cargamos las variables GLOBALES de idioma (includes)
+    $data = (array) json_decode(file_get_contents($appRoot . "/languajes/_global/$lang.json"), true);
+    $data && extract($data); // (Cortocircuito) Extraemos las variables del JSON para que estén disponibles en la vista
+
+     // Cargamos las variables de la VISTA de idioma
     $data = (array) json_decode(file_get_contents($appRoot . "/languajes/$content/$lang.json"), true);
     $data && extract($data); // (Cortocircuito) Extraemos las variables del JSON para que estén disponibles en la vista
      

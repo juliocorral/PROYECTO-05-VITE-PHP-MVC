@@ -60,7 +60,7 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
 
     <?php
     // Metadatos globales
-    include $appRoot . '/includes/es/metadatos_globales.php'
+    include $appRoot . '/includes/metadatos_globales.php'
     ?>
     
 </head>
@@ -68,11 +68,11 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
 
     <?php
     // Elementos globales dentro del body: script de tag manager
-    include $appRoot . '/includes/es/body_global.php'
+    include $appRoot . '/includes/body_global.php'
     ?>
 
     <!-- NAV -->
-    <?php include $appRoot . '/includes/es/nav.php' ?>
+    <?php include $appRoot . '/includes/nav.php' ?>
 
     <!-- HERO01 -->
     <header>        
@@ -189,7 +189,7 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
 
 
     <!-- FOOTER -->
-    <?php include $appRoot . '/includes/es/footer.php'?>
+    <?php include $appRoot . '/includes/footer.php'?>
 
 
 </body>

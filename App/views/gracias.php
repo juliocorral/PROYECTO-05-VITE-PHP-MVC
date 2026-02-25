@@ -18,7 +18,7 @@
 
     <?php
     // Metadatos globales
-    include $appRoot . '/includes/es/metadatos_globales.php'
+    include $appRoot . '/includes/metadatos_globales.php'
     ?>
 
 </head>
@@ -26,13 +26,13 @@
 
     <?php
     // Elementos globales dentro del body: script de tag manager
-    include $appRoot . '/includes/es/body_global.php'
+    include $appRoot . '/includes/body_global.php'
     ?>
 
     <!-- NAV -->
     <?php
     // es código php
-    include $appRoot . '/includes/es/nav.php'
+    include $appRoot . '/includes/nav.php'
     // ?>
 
     <?php
@@ -52,7 +52,7 @@
 
     <!-- FOOTER -->
     <?php
-    include $appRoot . '/includes/es/footer.php'
+    include $appRoot . '/includes/footer.php'
     ?>
 
 </body>

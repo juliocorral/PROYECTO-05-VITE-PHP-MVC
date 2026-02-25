@@ -13,14 +13,14 @@
 
     <?php
     // Metadatos globales
-    include $appRoot . '/includes/es/metadatos_globales.php'
+    include $appRoot . '/includes/metadatos_globales.php'
     ?>
 
 </head>
 <body>
     <?php
     // Elementos globales dentro del body: script de tag manager
-    include $appRoot . '/includes/es/body_global.php'
+    include $appRoot . '/includes/body_global.php'
     ?>
     <main>
         <img src="<?=$_ENV['RUTA']?>/assets/img/logos/panaderia-aginaga-logo.svg" alt="Panadería Aginaga" title="Panadería Aginaga">
@@ -29,6 +29,6 @@
     </main>
 
     <!-- FOOTER -->
-    <?php include $appRoot . '/includes/es/footer.php'?>
+    <?php include $appRoot . '/includes/footer.php'?>
 </body>
 </html>

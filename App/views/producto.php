@@ -69,7 +69,7 @@ mysqli_close($con); //cerrando la conexión a la BBDD
 
     <?php
     // Metadatos globales
-    include $appRoot . '/includes/es/metadatos_globales.php'
+    include $appRoot . '/includes/metadatos_globales.php'
     ?>
     
 </head>
@@ -77,11 +77,11 @@ mysqli_close($con); //cerrando la conexión a la BBDD
 
     <?php
     // Elementos globales dentro del body: script de tag manager
-    include $appRoot . '/includes/es/body_global.php'
+    include $appRoot . '/includes/body_global.php'
     ?>
 
     <!-- NAV -->
-    <?php include $appRoot . '/includes/es/nav.php' ?>
+    <?php include $appRoot . '/includes/nav.php' ?>
 
     <!-- HERO01 -->
     <header>
@@ -119,6 +119,6 @@ mysqli_close($con); //cerrando la conexión a la BBDD
 
 
     <!-- FOOTER -->
-    <?php include $appRoot . '/includes/es/footer.php'?>
+    <?php include $appRoot . '/includes/footer.php'?>
 </body>
 </html>
