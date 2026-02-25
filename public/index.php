@@ -92,6 +92,12 @@ if ($url != "/") {
 // FASE 3 - UNA VEZ TENEMOS LA $URL DEL USUARIO, Y TENEMOS EL IDIOMA DE LA URL EN $LANG, COMPROBAMOS SI EXISTE ESA URL EN ESE IDIOMA CONSULTANDO EL ARRAY DE URL
 if (isset($arrayRutasGet[$lang][$url])) {
 
+    // Si el idioma $lang y la url $url existen dentro del array de rutas permitidas, entonces cargamos la vista relacionada de los otros idiomas
+    $urlMultilang = getRutasEquivalentesPorIdioma($url, $arrayRutasGet);
+
+    // Imprime las rutas equivalentes en otros idiomas para esa url y ese idioma, por ejemplo: ["en" => "/en/contact", "fr" => "/fr/contact"]
+    // echo $urlMultilang['eu'];
+    // die;  
 
     // Si la url existe dentro del array de url's, entonces cogemos el valor de view, que es el archivo que haremos include para cargar el contenido pertienente de esta url.
     $view = $arrayRutasGet[$lang][$url]['view']; 

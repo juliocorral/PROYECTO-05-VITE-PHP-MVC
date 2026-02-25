@@ -22,11 +22,6 @@ $arrayRutasGet = [
             'view'      => '/views/contacto.php',
             'content'   => 'contacto'
         ],
-
-        '/es/showroom' => [
-            'view'      => '/views/templates.php',
-            'content'   => 'templates'
-        ],
         '/es/terminos-legales' => [
             'view'      => '/views/terminos.php',
             'content'   => 'terminos'
@@ -35,7 +30,6 @@ $arrayRutasGet = [
             'view'      => '/views/gracias.php',
             'content'   => 'gracias'
         ],
-        
         '/es/productos/panaderia' => [
             'view'      => '/views/producto.php',
             'content'   => 'producto'
@@ -59,6 +53,10 @@ $arrayRutasGet = [
         '/es/registro' => [
             'view'      => '/views/logup.php',
             'content'   => 'logup'
+        ],
+        '/es/showroom' => [
+            'view'      => '/views/templates.php',
+            'content'   => 'templates'
         ],
     ],
     'eu' => [
@@ -109,6 +107,10 @@ $arrayRutasGet = [
         '/eu/erregistroa' => [
             'view'      => '/views/logup.php',
             'content'   => 'logup'
+        ],
+        '/es/showroom' => [
+            'view'      => '/views/templates.php',
+            'content'   => 'templates'
         ],
     ]
 ];

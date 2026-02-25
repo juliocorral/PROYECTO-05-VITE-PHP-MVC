@@ -35,6 +35,47 @@ function enviarError($mensajeError, $campo) {
     die;
 }
 
+// Función para obtener las rutas equivalentes en otros idiomas a partir de una url y un array de rutas
+function getRutasEquivalentesPorIdioma(string $url, array $arrayRutasGet): array {
+    // Inicializamos el resultado con todos los idiomas a null
+    $resultado = [];
+    foreach ($arrayRutasGet as $lang => $rutas) {
+        $resultado[$lang] = null;
+    }
+ 
+    // 1) Detectar idioma origen (dónde existe la URL actual)
+    $idiomaOrigen = null;
+    foreach ($arrayRutasGet as $lang => $rutas) {
+        if (array_key_exists($url, $rutas)) {
+            $idiomaOrigen = $lang;
+            break;
+        }
+    }
+ 
+    // Si no existe la URL en ningún idioma, devolvemos nulls
+    if ($idiomaOrigen === null) {
+        return $resultado;
+    }
+ 
+    // 2) Sacar índice/posición de esa URL dentro del idioma origen
+    $clavesOrigen = array_keys($arrayRutasGet[$idiomaOrigen]);
+    $indice = array_search($url, $clavesOrigen, true);
+ 
+    if ($indice === false) {
+        return $resultado;
+    }
+ 
+    // 3) Recorrer todos los idiomas y coger la ruta homóloga por posición
+    foreach ($arrayRutasGet as $lang => $rutas) {
+        $clavesIdioma = array_keys($rutas);
+        if (isset($clavesIdioma[$indice])) {
+            $resultado[$lang] = $clavesIdioma[$indice];
+        }
+    }
+ 
+    return $resultado;
+}
+
 // Función para validar si un correo tiene la forma o estructura de un correo adecuada
 // La función devuelve true si es correcto, o false si no coincide con la expresión regular con la que se compara.
 function validar_email($valorRecibido) {    

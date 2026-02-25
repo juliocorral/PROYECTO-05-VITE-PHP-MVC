@@ -14,7 +14,7 @@
     ?>
 
     <ul class="idiomas">
-        <li><a href="<?=$_ENV['RUTA'] . $g_route_lang_eu_home?>"><?= $g_nav_lang_eu_text ?></a></li>
-        <li><a href="<?=$_ENV['RUTA'] . $g_route_lang_es_home?>"><?= $g_nav_lang_es_text ?></a></li>
+        <li><a href="<?=$_ENV['RUTA'] . $urlMultilang['eu']?>"><?= $g_nav_lang_eu_text ?></a></li>
+        <li><a href="<?=$_ENV['RUTA'] . $urlMultilang['es']?>"><?= $g_nav_lang_es_text ?></a></li>
     </ul> 
 </nav>
