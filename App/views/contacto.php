@@ -7,7 +7,7 @@
     <meta name="description" content="<?= $data['meta_description'] ?>">
 
     <!-- ASIGNACIÓN DE ARCHIVO CSS (MINIFICADO) A ESTE HTML -->
-    <?php echo vite_tags('src/js/views/contacto.js'); ?>
+    <?php echo vite_tags('src/js/contacto.js'); ?>
 
     <!-- Url de esta vista -->
     <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">

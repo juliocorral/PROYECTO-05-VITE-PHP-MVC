@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $data['meta_title'] ?></title>
     <meta name="description" content="<?= $data['meta_description'] ?>">
-    <?php echo vite_tags('src/js/views/inicio.js'); ?>
+    <?php echo vite_tags('src/js/inicio.js'); ?>
 
     <!-- Url de esta vista -->
     <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">

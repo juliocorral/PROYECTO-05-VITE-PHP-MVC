@@ -1,11 +1,13 @@
 <?php
-require_once '../vendor/autoload.php'; 
+// zona de variables de entorno
+// Adaptamos el enrutamiento a donde esté /vendor y donde esté el .env
+$basePath = dirname(__DIR__, 2);
+require_once $basePath . '/vendor/autoload.php';
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable('../');
+$dotenv = Dotenv::createImmutable($basePath);
 $dotenv->load();
 
-//Incluir recursos
-include_once '/App/config/helpers.php';
+include_once $basePath . "/App/config/helpers.php";
 
 // Aquí puedes gestionar el formulario enviado desde index.html
 
@@ -21,22 +23,22 @@ $respSystem = $_POST['respSystem'];
 $ip = $_SERVER['REMOTE_ADDR'];
 $fecha = date('Y-m-d H:i:s');
 
+$lang = $_POST['lang'] ?? 'es'; // Aquí puedes establecer el idioma 
+$url = $_POST['url']; // Aquí puedes establecer la URL de redirección en caso de error
+
 // 2.- Validar los datos
 $errores = [];
 if (comprobarVacio($nombre)) {
-    $errores[] = "El nombre es obligatorio.";
-    header("location:../index.php?error=vacio&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=vacio&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 if (comprobarCaracteres($nombre, 3, 30)) {
-    $errores[] = "El nombre debe tener entre 3 y 30 caracteres.";
-    header("location:../index.php?error=corto&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=corto&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
 if (comprobarVacio($telefono)) {
-    $errores[] = "El teléfono es obligatorio.";
-    header("location:../index.php?error=vacio&campo=telefono&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=vacio&campo=telefono&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 //if (!preg_match('/^[0-9]{9}$/', $telefono)) {
@@ -49,13 +51,11 @@ if (!preg_match("/(\+34|0034|34)?[ -]*(6|7|8|9)[ -]*([0-9][ -]*){8}/", $telefono
 */
 
 if (comprobarVacio($email)) {
-    $errores[] = "El correo electrónico es obligatorio.";
-    header("location:../index.php?error=vacio&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=vacio&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 if (!comprobarEmail($email)) {
-    $errores[] = "El correo electrónico no tiene un formato válido.";
-    header("location:../index.php?error=formato&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=formato&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 /*
@@ -67,20 +67,17 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 */
 
 if (comprobarCaracteres($mensaje, 10, 200)) {
-    $errores[] = "El mensaje debe tener entre 10 y 200 caracteres.";
-    header("location:../index.php?error=corto&campo=mensaje&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=corto&campo=mensaje&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
 if (!$aceptar) {
-    $errores[] = "Debes aceptar los términos y condiciones.";
-    header("location:../index.php?error=aceptar&campo=condiciones&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=aceptar&campo=condiciones&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
 if ($respUser !== $respSystem || (empty($respUser) && $respUser !== '0')) {
-    $errores[] = "La respuesta a la pregunta de seguridad es incorrecta.";
-    header("location:../index.php?error=error&campo=captcha&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artform01");
+    header("location:" . $url . "?error=error&campo=captcha&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
@@ -102,7 +99,7 @@ $correoDestinatario = $_ENV['EMAIL_ADMIN']; // correo del destinatario (administ
 $nombreDestinatario = 'Julio Corral'; // nombre del destinatario (administrador)
 $asunto = 'Nuevo mensaje desde el formulario de contacto de ' . $nombre;
 
-$html = file_get_contents('./templates/artform01.html');
+$html = file_get_contents('./templates/artForm01.html');
 
 $vars = [
     '{encabezado}' => 'Nuevo mensaje de contacto',
@@ -131,7 +128,7 @@ $correoDestinatario = $email; // correo del destinatario (administrador)
 $nombreDestinatario = $nombre; // nombre del destinatario (administrador)
 $asunto = $nombre . ' hemos recibido tu mensaje'; 
 
-$html = file_get_contents('./templates/artform01.html');
+$html = file_get_contents('./templates/artForm01.html');
 
 $vars = [
     '{encabezado}' => 'Solicitud recibida',
@@ -180,5 +177,5 @@ if (!$con) {
 }
 
 // 5.- Redirigir a una página de gracias
-header('location:../index.php?nombre=' . urlencode($nombre) . '#artform01');
+header('location:' . $url . 'gracias?nombre=' . urlencode($nombre));
 ?>

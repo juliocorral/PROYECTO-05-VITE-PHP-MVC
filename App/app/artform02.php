@@ -1,11 +1,13 @@
 <?php
-require_once '../vendor/autoload.php'; 
+// zona de variables de entorno
+// Adaptamos el enrutamiento a donde esté /vendor y donde esté el .env
+$basePath = dirname(__DIR__, 2);
+require_once $basePath . '/vendor/autoload.php';
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable('../');
+$dotenv = Dotenv::createImmutable($basePath);
 $dotenv->load();
 
-//Incluir recursos
-include_once '/App/config/helpers.php';
+include_once $basePath . "/App/config/helpers.php";
 
 // Aquí puedes gestionar el formulario enviado
 
@@ -81,7 +83,7 @@ $correoDestinatario = $_ENV['EMAIL_ADMIN']; // correo del destinatario (administ
 $nombreDestinatario = 'Julio Corral'; // nombre del destinatario (administrador)
 $asunto = 'Nuevo mensaje desde el formulario de contacto de ' . $nombre;
 
-$html = file_get_contents('./templates/artform01.html');
+$html = file_get_contents('./templates/artForm01.html');
 
 $vars = [
     '{encabezado}' => 'Nuevo mensaje de contacto',
@@ -110,7 +112,7 @@ $correoDestinatario = $email; // correo del destinatario (administrador)
 $nombreDestinatario = $nombre; // nombre del destinatario (administrador)
 $asunto = $nombre . ' hemos recibido tu mensaje'; 
 
-$html = file_get_contents('./templates/artform01.html');
+$html = file_get_contents('./templates/artForm01.html');
 
 $vars = [
     '{encabezado}' => 'Solicitud recibida',

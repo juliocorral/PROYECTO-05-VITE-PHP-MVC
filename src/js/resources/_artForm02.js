@@ -84,7 +84,7 @@ formulario.addEventListener('submit', function(event) {
     }
 
     // Envío los datos al servidor (index.php) mediante POST
-    xmlhttp.open("POST", "/App/artform02.php", true)
+    xmlhttp.open("POST", "/App/artForm02.php", true)
     xmlhttp.send(camposFormulario)
     */
 
@@ -125,7 +125,7 @@ formulario.addEventListener('submit', function(event) {
     */ 
 
 
-    fetch('App/artform02.php', {
+    fetch('App/artForm02.php', {
         method: 'POST',
         body: camposFormulario
     })

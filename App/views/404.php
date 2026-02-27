@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $data['meta_title'] ?? '404' ?></title>
     <meta name="description" content="<?= $data['meta_description'] ?? '404' ?>">
-    <?php echo vite_tags('src/js/views/404.js'); ?>
+    <?php echo vite_tags('src/js/404.js'); ?>
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">

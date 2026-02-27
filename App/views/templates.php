@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto 3 Recursos HTML y SCSS</title>
-    <?php echo vite_tags('src/js/views/templates.js'); ?>
+    <?php echo vite_tags('src/js/templates.js'); ?>
 </head>
 <body>
     <!-- NAV -->
@@ -491,10 +491,10 @@
 
             <!-- Contacto -->
             <!-- Formulario con envío por PHP -->
-            <section id="artform01">
+            <section id="artForm01">
                 <h2>Formulario PHP</h2>
 
-                <article class="artform01">
+                <article class="artForm01">
                     <?php
                     // Comprobar si hay variables en la URL
                     // Si hay un variables de error en la URL, mostrar mensaje de error encima del input del tipo de error
@@ -518,7 +518,7 @@
                                 <?php
                                 $nombre = '';
                             } ?>
-                            <form action="<?=base_path()?>/app/artform01.php" method="post" id="idForm">
+                            <form action="<?=base_path()?>/app/artForm01" method="post" id="idForm">
                                 <?php
                                 if (isset($error)) { ?>
                                     <p class="error">Error en el campo: <?=$campo?> de tipo: <?=$error?></p>
@@ -527,11 +527,11 @@
 
                                 <!-- nombre -->
                                 <label for="nombre">Nombre *</label>
-                                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="30" placeholder="Introduce nombre y apellido" value="<?=$nombre?>" required />
+                                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="30" placeholder="Introduce nombre y apellido" value="<?=$nombre?>" />
                                 
                                 <!-- teléfono -->
                                 <label for="telefono">Teléfono *</label>
-                                <input type="tel" name="telefono" id="telefono" placeholder="Introduce nº móvil" value="<?=$telefono?>" required />
+                                <input type="tel" name="telefono" id="telefono" placeholder="Introduce nº móvil" value="<?=$telefono?>" />
                                 
                                 <!-- email -->
                                 <label for="email">Correo electrónico</label>
@@ -539,7 +539,7 @@
                                 
                                 <!-- mensaje -->
                                 <label for="mensaje">Mensaje *</label>
-                                <textarea name="mensaje" id="mensaje" rows="7" placeholder="Introduce comentario" required><?=$mensaje?></textarea>
+                                <textarea name="mensaje" id="mensaje" rows="7" placeholder="Introduce comentario"><?=$mensaje?></textarea>
                                 
                                 <!-- aceptar términos -->
                                 <div class="horizontal">
@@ -553,10 +553,13 @@
                                     <span id="num1">3</span>
                                     <span id="operacion">+</span>
                                     <span id="num2">8</span>
-                                    <input type="text" name="respuesta" placeholder="Respuesta" id="respuesta" required />
+                                    <input type="text" name="respuesta" placeholder="Respuesta" id="respuesta" />
                                     <!-- Respuesta calculada OCULTA -->
                                     <input type="hidden" name="respSystem" id="respSystem" value="" />
                                 </div>
+
+                                <input type="hidden" name="lang" id="lang" value="<?= $lang ?>" />
+                                <input type="hidden" name="url" id="url" value="<?= $url ?>" />
                                 
                                 <!-- enviar -->
                                 <input type="submit" value="Enviar" class="btn-enviar" />
@@ -597,10 +600,10 @@
             </section>
 
             <!-- Formulario con envío por XMLHTTPRequest (Ajax) -->
-            <section id="artform02">
+            <section id="artForm02">
                 <h2>Formulario JS</h2>
 
-                <article class="artform02">
+                <article class="artForm02">
 
                     <h3>Encabezado Formulario FETCH API</h3>
                     <div>
@@ -610,7 +613,7 @@
                                 <div class="modal-content">
                                     <h3>¡Formulario enviado correctamente!</h3>
                                     <p id="mensajeOk"></p>
-                                    <a href="#artform02" class="boton" id="btnMostrarFormulario">Volver</a>
+                                    <a href="#artForm02" class="boton" id="btnMostrarFormulario">Volver</a>
                                 </div>
                             </div>
 
@@ -716,7 +719,7 @@
             <article class="artForm">
                 <h3>Formulario de contacto</h3>
 
-                <form action="<?=base_path()?>/app/gestionForm" method="post">
+                <form action="<?=base_path()?>/app/artForm" method="post">
 
                     <?php
                     if( isset($_GET['campo']) ){
@@ -724,7 +727,7 @@
                         $campo = $_GET['campo'];
                         $error = $_GET['error'];
                         $nombre = $_GET['nombre'];
-                        $tel = $_GET['tel'];
+                        $telefono = $_GET['telefono'];
                         $email = $_GET['email'];
                         $mensaje = $_GET['mensaje'];
                         // echo "<p class='error'>Hay un error en el campo $campo de tipo $error</p>";

@@ -27,7 +27,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $fecha = date('Y-m-d H:i:s');
 
 
-// // 02 Comprobación DEV (mostrarlos a través de echo para ver que vienen bien)
+// 02 Comprobación DEV (mostrarlos a través de echo para ver que vienen bien)
 // echo $nombre.'<br>';
 // echo $tel.'<br>';
 // echo $email.'<br>';
@@ -39,8 +39,6 @@ $fecha = date('Y-m-d H:i:s');
 // echo $lang.'<br>';
 // echo $url;
 // die;
-
-
 
 
 // 03 Validaciones de campos

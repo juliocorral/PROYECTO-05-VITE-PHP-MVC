@@ -49,7 +49,7 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $data['meta_title'] ?></title>
     <meta name="description" content="<?= $data['meta_description'] ?>">
-    <?php echo vite_tags('src/js/views/zonaAdmin.js'); ?>
+    <?php echo vite_tags('src/js/zonaAdmin.js'); ?>
 
     <!-- Url de esta vista -->
     <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
@@ -94,7 +94,7 @@ if (isset($_SESSION['LOGIN']) && $_SESSION['LOGIN'] === "1") {
             // MOSTRARÉ EL FORMULARIO DE LOGEO
         ?>
             <article class="artForm">
-                <form action="<?=base_path()?>/app/gestionFormLogin" method="post">
+                <form action="<?=base_path()?>/app/artFormLogin" method="post">
 
                     <?php
                     if( isset($_GET['error']) ){
