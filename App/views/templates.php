@@ -550,12 +550,12 @@
                                 <!-- captcha -->
                                 <label for="captcha">Resuelve</label>
                                 <div class="horizontal">
-                                    <span id="num1">3</span>
-                                    <span id="operacion">+</span>
-                                    <span id="num2">8</span>
+                                    <span id="num1Form01">3</span>
+                                    <span id="operacionForm01">+</span>
+                                    <span id="num2Form01">8</span>
                                     <input type="text" name="respuesta" placeholder="Respuesta" id="respuesta" />
                                     <!-- Respuesta calculada OCULTA -->
-                                    <input type="hidden" name="respSystem" id="respSystem" value="" />
+                                    <input type="hidden" name="respSystem" id="respSystemForm01" value="" />
                                 </div>
 
                                 <input type="hidden" name="lang" id="lang" value="<?= $lang ?>" />
@@ -655,6 +655,9 @@
                                 
                                 <!-- enviar -->
                                 <input type="submit" value="Enviar" class="btn-enviar" id="btnEnviarAjax" />
+
+                                <input type="hidden" name="lang" id="lang" value="<?= $lang ?>" />
+                                <input type="hidden" name="url" id="url" value="<?= $url ?>" />
                             </form>
 
                             <!-- Loader -->
@@ -743,11 +746,9 @@
                     <label for="tel">Teléfono</label>
                     <input type="tel" class='<?php if(isset($campo) && $campo == "telefono"){ echo "inputError";} ?>' name="tel" id="tel" placeholder="Aquí tu teléfono" value="<?php if(isset($tel)){echo $tel;}?>">
 
-                    
                     <span class="error"><?php if( isset($campo) && $campo == "email"){echo "Hay un error en el campo $campo de tipo $error";} ?></span>
                     <label for="email">Email *</label>
                     <input type="email" class='<?php if(isset($campo) && $campo == "email"){ echo "inputError";} ?>' name="email" id="email" placeholder="* Correo electrónico" value="<?php if(isset($email)){echo $email;}?>">
-
 
                     <span class="error"><?php if( isset($campo) && $campo == "mensaje"){echo "Hay un error en el campo $campo de tipo $error";} ?></span>
                     <label for="mensaje">Comentarios</label>

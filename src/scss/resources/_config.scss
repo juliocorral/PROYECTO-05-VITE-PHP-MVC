@@ -87,6 +87,12 @@ a{
     font-family: $fuenteTextos;      
     text-decoration: none;
 }
+.error{
+    color: red;
+    font-family: $fuenteTextos;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
 
 .h2Especial{
     // los estilos de la caja donde dentro estarán tanto el span (ralla) como el h2

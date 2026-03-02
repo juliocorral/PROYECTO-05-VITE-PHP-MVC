@@ -29,16 +29,16 @@ $url = $_POST['url']; // Aquí puedes establecer la URL de redirección en caso 
 // 2.- Validar los datos
 $errores = [];
 if (comprobarVacio($nombre)) {
-    header("location:" . $url . "?error=vacio&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=vacio&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 if (comprobarCaracteres($nombre, 3, 30)) {
-    header("location:" . $url . "?error=corto&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=corto&campo=nombre&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
 if (comprobarVacio($telefono)) {
-    header("location:" . $url . "?error=vacio&campo=telefono&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=vacio&campo=telefono&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 //if (!preg_match('/^[0-9]{9}$/', $telefono)) {
@@ -51,11 +51,11 @@ if (!preg_match("/(\+34|0034|34)?[ -]*(6|7|8|9)[ -]*([0-9][ -]*){8}/", $telefono
 */
 
 if (comprobarVacio($email)) {
-    header("location:" . $url . "?error=vacio&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=vacio&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 if (!comprobarEmail($email)) {
-    header("location:" . $url . "?error=formato&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA']   . $url . "?error=formato&campo=email&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 /*
@@ -67,17 +67,17 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 */
 
 if (comprobarCaracteres($mensaje, 10, 200)) {
-    header("location:" . $url . "?error=corto&campo=mensaje&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=corto&campo=mensaje&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
 if (!$aceptar) {
-    header("location:" . $url . "?error=aceptar&campo=condiciones&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=aceptar&campo=condiciones&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
 if ($respUser !== $respSystem || (empty($respUser) && $respUser !== '0')) {
-    header("location:" . $url . "?error=error&campo=captcha&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
+    header("location:" . $_ENV['RUTA'] . $url . "?error=error&campo=captcha&nombre=$nombre&telefono=$telefono&email=$email&mensaje=$mensaje#artForm01");
     die;
 }
 
@@ -91,17 +91,22 @@ if (!empty($errores)) {
 
 // 3.- Enviar una respuesta al la empresa y al usuario
 
+// TODO: Para envío multiidioma cargariamos un JSON con los textos en cada idioma y los cargaríamos en variables para luego sustituirlos en la plantilla del email.
+// TODO: Variabilizar en el template del email los nonbres de campos de los valores que se mandan.
+
 // 3.1.- Enviar un correo electrónico con los datos del formulario a la empresa
-$urlWeb='https://localhost:3000';
+$urlWeb = $_ENV['RUTA'];
 $correoEmisor = $_ENV['EMAIL_WEB']; // correo del remitente (de la web)
 $nombreEmisor = 'Web Panadería'; // nombre del remitente (de la web)
 $correoDestinatario = $_ENV['EMAIL_ADMIN']; // correo del destinatario (administrador)
 $nombreDestinatario = 'Julio Corral'; // nombre del destinatario (administrador)
 $asunto = 'Nuevo mensaje desde el formulario de contacto de ' . $nombre;
 
-$html = file_get_contents('./templates/artForm01.html');
+$html = file_get_contents($basePath . "/App/app/templates/artForm01.html");
 
 $vars = [
+    '{urlWeb}' => $urlWeb,
+    '{urlFormulario}' => $url,
     '{encabezado}' => 'Nuevo mensaje de contacto',
     '{texto_cabecera}' => 'Se ha recibido un nuevo mensaje con los siguientes datos:',    
     '{nombre}' => htmlspecialchars($nombre),  
@@ -118,19 +123,21 @@ $cuerpo = str_replace(array_keys($vars), array_values($vars), $html);
 // Para ver como llegaría el email
 // echo $cuerpo; die;
 
-include './envioPhpMailer.php';
+include $basePath . "/App/app/envioPhpMailer.php";
 
 // 3.2.- Enviar un correo electrónico al usuario confirmando la recepción del mensaje
-$urlWeb='https://localhost:3000';
+$urlWeb = $_ENV['RUTA'];
 $correoEmisor = $_ENV['EMAIL_WEB']; // correo del remitente (de la web)
 $nombreEmisor = 'Web Panadería'; // nombre del remitente (de la web)
 $correoDestinatario = $email; // correo del destinatario (administrador)
 $nombreDestinatario = $nombre; // nombre del destinatario (administrador)
 $asunto = $nombre . ' hemos recibido tu mensaje'; 
 
-$html = file_get_contents('./templates/artForm01.html');
+$html = file_get_contents($basePath . "/App/app/templates/artForm01.html");
 
 $vars = [
+    '{urlWeb}' => $urlWeb,
+    '{urlFormulario}' => $url,
     '{encabezado}' => 'Solicitud recibida',
     '{texto_cabecera}' => 'Se ha recibido su mensaje con los siguientes datos:',    
     '{nombre}' => htmlspecialchars($nombre),  
@@ -147,12 +154,12 @@ $cuerpo = str_replace(array_keys($vars), array_values($vars), $html);
 // Para ver como llegaría el email
 // echo $cuerpo; die;
 
-include './envioPhpMailer.php';
+include $basePath . "/App/app/envioPhpMailer.php";
 
 // 4.- Guardar los datos en la base de datos.
 
 // 4.1 - Conectar con la base de datos
-$con = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_NAME']);
+$con = mysqli_connect($_ENV['BBDD_HOST'], $_ENV['BBDD_USER'], $_ENV['BBDD_PASS'], $_ENV['BBDD_BBDD']);
 
 // 4.2 - Comprobar la conexión
 if (!$con) {
@@ -160,13 +167,13 @@ if (!$con) {
 } else {
     // 4.3 - Insertar los datos en la tabla correspondiente
     $con->set_charset("utf8mb4");
-    $sql = "INSERT INTO consultas (nombre, telefono, email, mensaje, ip, fecha) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO consultas_web (creado_en, nombre, telefono, email, mensaje, ip, idioma, url_origen) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($con, $sql);
 
     if (!$stmt) {
         error_log("Error al preparar la consulta: " . mysqli_error($con));
     } else {    
-        mysqli_stmt_bind_param($stmt, "ssssss", $nombre, $telefono, $email, $mensaje, $ip, $fecha);
+        mysqli_stmt_bind_param($stmt, "ssssssss", $fecha, $nombre, $telefono, $email, $mensaje, $ip, $lang, $url);
         if (!mysqli_stmt_execute($stmt)) {
             error_log("Error al insertar los datos: " . mysqli_stmt_error($stmt));
         }
@@ -177,5 +184,5 @@ if (!$con) {
 }
 
 // 5.- Redirigir a una página de gracias
-header('location:' . $url . 'gracias?nombre=' . urlencode($nombre));
+header('location:' . $_ENV['RUTA'] . $url . '?nombre=' . urlencode($nombre) . '#artForm01');
 ?>

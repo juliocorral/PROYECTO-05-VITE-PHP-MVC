@@ -1,10 +1,10 @@
 console.log('Proyecto 004 - Maquetación (formulario)')
 
 // Obtengo los elementos de los dos números y del resultado del sistema
-const num1 = document.getElementById('num1')
-const operacion = document.getElementById('operacion')
-const num2 = document.getElementById('num2')
-const respSystem = document.getElementById('respSystem')
+const num1Form01 = document.getElementById('num1Form01')
+const operacionForm01 = document.getElementById('operacionForm01')
+const num2Form01 = document.getElementById('num2Form01')
+const respSystemForm01 = document.getElementById('respSystemForm01')
 
 // Calculo los dos números random (entre 1 y 10) y los asigno a los elementos y hago la suma (me aseguro que los valores sean Number)
 let numero1 = (Number)(Math.floor(Math.random() * 10))
@@ -55,7 +55,7 @@ switch (numOperacion) {
 console.log(numero1 + " " + simbolo + " " + numero2 + " = " + resultado)
 
 // Asigno los valores a los elementos
-num1.textContent = numero1
-operacion.textContent = simbolo
-num2.textContent = numero2
-respSystem.value = resultado
+num1Form01.textContent = numero1
+operacionForm01.textContent = simbolo
+num2Form01.textContent = numero2
+respSystemForm01.value = resultado
