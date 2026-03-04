@@ -600,7 +600,7 @@
             </section>
 
             <!-- Formulario con envío por XMLHTTPRequest (Ajax) -->
-            <section id="artform02">
+            <section id="artForm02">
                 <h2>Formulario API REST / XMLHTTPRequest</h2>
 
                 <article class="artForm02">
@@ -613,7 +613,7 @@
                                 <div class="modal-content">
                                     <h3>¡Formulario enviado correctamente!</h3>
                                     <p id="mensajeOk"></p>
-                                    <a href="#artform02" class="boton" id="btnMostrarFormulario">Volver</a>
+                                    <a href="#artForm02" class="boton" id="btnMostrarFormulario">Volver</a>
                                 </div>
                             </div>
 

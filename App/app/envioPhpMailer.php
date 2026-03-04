@@ -9,6 +9,11 @@ use PHPMailer\PHPMailer\Exception;
 
 $basePath = dirname(__DIR__, 2);
 require $basePath . '/vendor/autoload.php'; /* modificar */
+
+$pathImagen = $basePath . '/App/app/img/logo.png';
+
+if (!file_exists($pathImagen)) { die("No existe: $pathImagen"); }
+if (!is_readable($pathImagen)) { die("No se puede leer: $pathImagen"); }
   
 $mail = new PHPMailer(true);
   
@@ -31,7 +36,7 @@ try {
     $mail->CharSet = PHPMailer::CHARSET_UTF8;                    
     $mail->Subject = $asunto; //varibles
     $mail->Body = $cuerpo; //variables
-    //$mail->AddEmbeddedImage($basePath . "/App/app/img/logo.png", 'logo');
+    $mail->AddEmbeddedImage($basePath .'/App/app/img/logo.png', 'logo');
     $mail->AltBody = 'Body in plain text for non-HTML mail clients';
 
     if (!$mail->send()) {
