@@ -55,7 +55,7 @@
                 <h3><?= $data['form_h3'] ?></h3>
 
                 <!-- Al abrir este otro archivo, genero otro scope, se reseta y limpia la memoria en el servidor -->
-                <form action="<?=base_path()?>/app/gestionForm" method="post">
+                <form action="<?=base_path()?>/app/artForm" method="post">
 
                     <?php
                     if( isset($_GET['campo']) ){

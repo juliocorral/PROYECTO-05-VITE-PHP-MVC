@@ -27,6 +27,9 @@ $campo = "";
 $ip = $_SERVER['REMOTE_ADDR'];
 $fecha = date('Y-m-d H:i:s');
 
+$lang = $_POST['lang'] ?? 'es'; // Aquí puedes establecer el idioma 
+$url = $_POST['url']; // Aquí puedes establecer la URL de redirección en caso de error
+
 // 2.- Validar los datos
 if (comprobarVacio($nombre)) {
     enviarError("El nombre es obligatorio.", "nombre");
@@ -83,9 +86,11 @@ $correoDestinatario = $_ENV['EMAIL_ADMIN']; // correo del destinatario (administ
 $nombreDestinatario = 'Julio Corral'; // nombre del destinatario (administrador)
 $asunto = 'Nuevo mensaje desde el formulario de contacto de ' . $nombre;
 
-$html = file_get_contents('./templates/artForm01.html');
+$html = file_get_contents($basePath . "/App/app/templates/artForm01.html");
 
 $vars = [
+    '{urlWeb}' => $urlWeb,
+    '{urlFormulario}' => $url,
     '{encabezado}' => 'Nuevo mensaje de contacto',
     '{texto_cabecera}' => 'Se ha recibido un nuevo mensaje con los siguientes datos:',    
     '{nombre}' => htmlspecialchars($nombre),  
@@ -102,7 +107,7 @@ $cuerpo = str_replace(array_keys($vars), array_values($vars), $html);
 // Para ver como llegaría el email
 // echo $cuerpo; die;
 
-include './envioPhpMailer.php';
+include $basePath . "/App/app/envioPhpMailer.php";
 
 // 3.2.- Enviar un correo electrónico al usuario confirmando la recepción del mensaje
 $urlWeb='https://localhost:3000';
@@ -112,9 +117,11 @@ $correoDestinatario = $email; // correo del destinatario (administrador)
 $nombreDestinatario = $nombre; // nombre del destinatario (administrador)
 $asunto = $nombre . ' hemos recibido tu mensaje'; 
 
-$html = file_get_contents('./templates/artForm01.html');
+$html = file_get_contents($basePath . "/App/app/templates/artForm01.html");
 
 $vars = [
+    '{urlWeb}' => $urlWeb,
+    '{urlFormulario}' => $url,
     '{encabezado}' => 'Solicitud recibida',
     '{texto_cabecera}' => 'Se ha recibido su mensaje con los siguientes datos:',    
     '{nombre}' => htmlspecialchars($nombre),  
@@ -131,12 +138,12 @@ $cuerpo = str_replace(array_keys($vars), array_values($vars), $html);
 // Para ver como llegaría el email
 // echo $cuerpo; die;
 
-include './envioPhpMailer.php';
+include $basePath . "/App/app/envioPhpMailer.php";
 
 // 4.- Guardar los datos en la base de datos.
 
 // 4.1 - Conectar con la base de datos
-$con = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_NAME']);
+$con = mysqli_connect($_ENV['BBDD_HOST'], $_ENV['BBDD_USER'], $_ENV['BBDD_PASS'], $_ENV['BBDD_BBDD']);
 
 // 4.2 - Comprobar la conexión
 if (!$con) {
@@ -144,13 +151,13 @@ if (!$con) {
 } else {
     // 4.3 - Insertar los datos en la tabla correspondiente
     $con->set_charset("utf8mb4");
-    $sql = "INSERT INTO consultas (nombre, telefono, email, mensaje, ip, fecha) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO consultas_web (creado_en, nombre, telefono, email, mensaje, ip, idioma, url_origen) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($con, $sql);
 
     if (!$stmt) {
         error_log("Error al preparar la consulta: " . mysqli_error($con));
     } else {    
-        mysqli_stmt_bind_param($stmt, "ssssss", $nombre, $telefono, $email, $mensaje, $ip, $fecha);
+        mysqli_stmt_bind_param($stmt, "ssssssss", $fecha, $nombre, $telefono, $email, $mensaje, $ip, $lang, $url);
         if (!mysqli_stmt_execute($stmt)) {
             error_log("Error al insertar los datos: " . mysqli_stmt_error($stmt));
         }

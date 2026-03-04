@@ -1,4 +1,4 @@
-console.log('Proyecto 004 - Maquetación (formulario)')
+console.log('Proyecto 005 - MVC con Vite')
 
 // Obtengo los elementos de los dos números y del resultado del sistema
 const num1Form01 = document.getElementById('num1Form01')

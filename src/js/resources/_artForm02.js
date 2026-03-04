@@ -24,7 +24,7 @@ const mensajeOk = document.querySelector('#mensajeOk')
 const btnMostrarFormulario = document.querySelector('#btnMostrarFormulario')
 
 const errorAjax = document.querySelector('#errorAjax')
-const loader = document.querySelector('#moduleloader01')
+const loader = document.querySelector('#moduloLoader01')
 
 // 2.2 Agregamos el evento de click al botón de mostrar el formulario para volver a mostrar el formulario después de un envío exitoso
 btnMostrarFormulario.addEventListener('click', function() {
@@ -125,7 +125,7 @@ formulario.addEventListener('submit', function(event) {
     */ 
 
 
-    fetch('App/artForm02.php', {
+    fetch('/app/artForm02', {
         method: 'POST',
         body: camposFormulario
     })

@@ -553,7 +553,7 @@
                                     <span id="num1Form01">3</span>
                                     <span id="operacionForm01">+</span>
                                     <span id="num2Form01">8</span>
-                                    <input type="text" name="respuesta" placeholder="Respuesta" id="respuesta" />
+                                    <input type="text" name="respuesta" placeholder="Respuesta" id="respuestaForm01" />
                                     <!-- Respuesta calculada OCULTA -->
                                     <input type="hidden" name="respSystem" id="respSystemForm01" value="" />
                                 </div>
@@ -600,12 +600,12 @@
             </section>
 
             <!-- Formulario con envío por XMLHTTPRequest (Ajax) -->
-            <section id="artForm02">
-                <h2>Formulario JS</h2>
+            <section id="artform02">
+                <h2>Formulario API REST / XMLHTTPRequest</h2>
 
                 <article class="artForm02">
 
-                    <h3>Encabezado Formulario FETCH API</h3>
+                    <h3>Encabezado Formulario API REST</h3>
                     <div>
                         <div class="contenedor-form">
 
@@ -613,7 +613,7 @@
                                 <div class="modal-content">
                                     <h3>¡Formulario enviado correctamente!</h3>
                                     <p id="mensajeOk"></p>
-                                    <a href="#artForm02" class="boton" id="btnMostrarFormulario">Volver</a>
+                                    <a href="#artform02" class="boton" id="btnMostrarFormulario">Volver</a>
                                 </div>
                             </div>
 
@@ -652,16 +652,16 @@
                                     <!-- Respuesta calculada OCULTA -->
                                     <input type="hidden" name="respSystem" id="respSystemAjax" value="" />
                                 </div>
-                                
-                                <!-- enviar -->
-                                <input type="submit" value="Enviar" class="btn-enviar" id="btnEnviarAjax" />
 
                                 <input type="hidden" name="lang" id="lang" value="<?= $lang ?>" />
                                 <input type="hidden" name="url" id="url" value="<?= $url ?>" />
+                                
+                                <!-- enviar -->
+                                <input type="submit" value="Enviar" class="btn-enviar" id="btnEnviarAjax" />
                             </form>
 
                             <!-- Loader -->
-                            <div class="moduleloader01" id="moduleloader01">
+                            <div class="moduloLoader01" id="moduloLoader01">
                                 <svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
                                     <circle fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
                                     <line fill="none" stroke-linecap="round" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
