@@ -1,7 +1,11 @@
 {
   "meta_title": "Contacta con nosotros",
   "meta_description": "Página de contacto de nuestra panadería en Aginaga",
-  "route_canonical": "/es/contacto",
+  "meta_og_locale": "es_ES",
+  "meta_og_site_name": "Panadería Aginaga",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Logotipo de Panadería Aginaga",
   "route_terminos": "/es/terminos-legales",
   "hero_title": "Estamos cerca de ti",
   "section_h2": "Contacta",

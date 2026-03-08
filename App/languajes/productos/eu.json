@@ -1,7 +1,11 @@
 {
   "meta_title": "Gure okindegiko produktuak",
   "meta_description": "Ezagutu Aginagako Okindegian egunero egindako ogi, pastel eta torrija artisauak.",
-  "route_canonical": "/eu/produktuak",
+  "meta_og_locale": "eu_ES",
+  "meta_og_site_name": "Aginagako Okindegia",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/vistas/productos/panes-pasteles-1800.avif",
+  "meta_social_image_alt": "Aginagako Okindegiaren artisau produktuak",
   "route_contacto": "/eu/kontaktua",
   "hero_title": "Produktu onenak zure mahaian",
   "hero_cta_text": "Egin zure eskaera",

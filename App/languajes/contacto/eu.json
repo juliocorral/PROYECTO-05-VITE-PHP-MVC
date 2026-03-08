@@ -1,7 +1,11 @@
 {
   "meta_title": "Jarri gurekin harremanetan",
   "meta_description": "Gure Aginagako okindegiaren kontaktu orria",
-  "route_canonical": "/eu/kontaktua",
+  "meta_og_locale": "eu_ES",
+  "meta_og_site_name": "Aginagako Okindegia",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Aginagako Okindegiaren logotipoa",
   "route_terminos": "/eu/legezko-terminoak",
   "hero_title": "Zugandik gertu gaude",
   "section_h2": "Kontaktua",

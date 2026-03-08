@@ -1,7 +1,11 @@
 {
   "meta_title": "Panadería Aginaga | Obrador de pan y pastelería artesanal",
   "meta_description": "Panadería y pastelería artesanal en Aginaga desde 1925. Conoce a nuestro equipo, descubre nuestros productos y disfruta de un trato cercano en cada visita.",
-  "route_canonical": "/es",
+  "meta_og_locale": "es_ES",
+  "meta_og_site_name": "Panadería Aginaga",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Logotipo de Panadería Aginaga",
   "route_contacto": "/es/contacto",
   "route_quienes_somos": "/es/sobre-nosotros",
   "route_productos": "/es/productos",

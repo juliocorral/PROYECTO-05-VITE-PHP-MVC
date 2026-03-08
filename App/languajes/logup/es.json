@@ -1,7 +1,11 @@
 {
   "meta_title": "Registro",
   "meta_description": "Formulario de registro de usuarios.",
-  "route_canonical": "/es/registro",
+  "meta_og_locale": "es_ES",
+  "meta_og_site_name": "Panadería Aginaga",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Logotipo de Panadería Aginaga",
   "route_terminos": "/es/terminos-legales",
   "hero_title": "Registro",
   "label_nombre": "Nombre *",

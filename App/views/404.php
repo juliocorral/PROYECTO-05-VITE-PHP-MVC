@@ -7,9 +7,28 @@
     <meta name="description" content="<?= $data['meta_description'] ?? '404' ?>">
     <?php echo vite_tags('src/js/404.js'); ?>
 
+    <!-- Url de esta vista -->
+    <link rel="canonical" href="<?=$_ENV['RUTA']?><?= $url ?>">
+    
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
     <meta name="referrer" content="origin">
+
+    <!-- Metadatos para redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="<?= $data['meta_og_locale'] ?? 'es_ES' ?>">
+    <meta property="og:site_name" content="<?= $data['meta_og_site_name'] ?? 'Panadería Aginaga' ?>">
+    <meta property="og:title" content="<?= $data['meta_title'] ?? '404' ?>">
+    <meta property="og:description" content="<?= $data['meta_description'] ?? '404' ?>">
+    <meta property="og:url" content="<?=$_ENV['RUTA']?><?= $url ?>">
+    <meta property="og:image" content="<?=$_ENV['RUTA']?><?= $data['meta_social_image'] ?? '/assets/img/logos/panaderia-aginaga-logo-original.jpg' ?>">
+    <meta property="og:image:alt" content="<?= $data['meta_social_image_alt'] ?? '' ?>">
+
+    <meta name="twitter:card" content="<?= $data['meta_twitter_card'] ?? 'summary_large_image' ?>">
+    <meta name="twitter:title" content="<?= $data['meta_title'] ?? '404' ?>">
+    <meta name="twitter:description" content="<?= $data['meta_description'] ?? '404' ?>">
+    <meta name="twitter:image" content="<?=$_ENV['RUTA']?><?= $data['meta_social_image'] ?? '/assets/img/logos/panaderia-aginaga-logo-original.jpg' ?>">
+    <meta name="twitter:image:alt" content="<?= $data['meta_social_image_alt'] ?? '' ?>">
 
     <?php
     // Metadatos globales

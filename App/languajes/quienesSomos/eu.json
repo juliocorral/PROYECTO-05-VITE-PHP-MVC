@@ -1,7 +1,11 @@
 {
   "meta_title": "Guri buruz | Aginagako Okindegia - Tradizioa 1925etik",
   "meta_description": "Ezagutu Aginagako Okindegiko profesionalen taldea. Ia mende bateko okintza tradizioa Aginagaren bihotzean, kalitate goreneko artisau produktuak eginez.",
-  "route_canonical": "/eu/guri-buruz",
+  "meta_og_locale": "eu_ES",
+  "meta_og_site_name": "Aginagako Okindegia",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/vistas/quienes-somos/quienes-somos-1800.avif",
+  "meta_social_image_alt": "Aginagako Okindegiaren taldea",
   "route_contacto": "/eu/kontaktua",
   "route_productos": "/eu/produktuak",
   "hero_title": "Tradizioz ogigileak 1925etik",

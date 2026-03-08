@@ -52,7 +52,7 @@ mysqli_close($con); //cerrando la conexión a la BBDD
 
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,11 +61,27 @@ mysqli_close($con); //cerrando la conexión a la BBDD
     <?php echo vite_tags('src/js/producto.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA'].'/'.$url?>">
+   <link rel="canonical" href="<?=$_ENV['RUTA']?><?= $url ?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
     <meta name="referrer" content="origin">
+
+    <!-- Metadatos para redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="<?= $data['meta_og_locale'] ?>">
+    <meta property="og:site_name" content="<?= $data['meta_og_site_name'] ?>">
+    <meta property="og:title" content="<?=$title?>">
+    <meta property="og:description" content="<?=$description?>">
+    <meta property="og:url" content="<?=$_ENV['RUTA']?><?= $url ?>">
+    <meta property="og:image" content="<?=$srcImg1?>">
+    <meta property="og:image:alt" content="<?=$altImg1?>">
+
+    <meta name="twitter:card" content="<?= $data['meta_twitter_card'] ?>">
+    <meta name="twitter:title" content="<?=$title?>">
+    <meta name="twitter:description" content="<?=$description?>">
+    <meta name="twitter:image" content="<?=$srcImg1?>">
+    <meta name="twitter:image:alt" content="<?=$altImg1?>">
 
     <?php
     // Metadatos globales

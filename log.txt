@@ -8,3 +8,6 @@
 2026-02-25 17:38:29 - Ahora debes variabilizar los archivos de la carpeta includes y crear sus variables y valores en la carpeta _global dentro de languages. Ademá debes luego hacer la traducción a Euskara en el eu.json OJO! Con las rutas de cada idioma
 2026-02-25 18:21:29 - Revisa las URLs de las vistas y variabiliza los enlaces de las rutas para que funcionen bien en cada idioma. Usa los JSON de cada vista en la carpeta de languages para añadir esas variables de rutas
 2026-02-27 18:14:50 - revisa la carpeta src/scss porque ahora sus recursos scss se han movido dentro de las carpeta src/scss/resources actualiza los scss de las vistas para que puedan acceder correctamente a sus recursos movidos
+2026-03-08 19:06:03 - revisa todos los JSON de las vistas en ambos idiomas y elimina la clave-valor denominada: route_canonical
+2026-03-08 19:39:54 - Genera en la vista inicio.php en la zona de og y twitter los metadatos necesarios. Ten encuenta que deben estar variabilizados incluyendo la imagen.
+2026-03-08 19:46:25 - Haz lo mismo para el resto de vistas

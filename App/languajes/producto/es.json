@@ -1,4 +1,7 @@
 {
+  "meta_og_locale": "es_ES",
+  "meta_og_site_name": "Panadería Aginaga",
+  "meta_twitter_card": "summary_large_image",
   "route_contacto": "/es/contacto",
   "hero_cta_text": "Contáctanos",
   "section_cta_text": "Contacta",

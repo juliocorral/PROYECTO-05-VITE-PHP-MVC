@@ -1,6 +1,11 @@
 {
   "meta_title": "404 Pagina no encontrada",
   "meta_description": "Pagina no encontrada. Error 404",
+  "meta_og_locale": "es_ES",
+  "meta_og_site_name": "Panadería Aginaga",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Logotipo de Panadería Aginaga",
   "route_inicio": "/es",
   "logo_alt": "Panaderia Aginaga",
   "logo_title": "Panaderia Aginaga",

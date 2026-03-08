@@ -1,7 +1,11 @@
 {
   "meta_title": "Aginagako Okindegia | Ogi eta gozogintza artisau lantegia",
   "meta_description": "Aginagako artisau okindegia eta gozotegia 1925etik. Ezagutu gure taldea, aurkitu gure produktuak eta gozatu bisita bakoitzean tratu hurbilaz.",
-  "route_canonical": "/eu",
+  "meta_og_locale": "eu_ES",
+  "meta_og_site_name": "Aginagako Okindegia",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Aginagako Okindegiaren logotipoa",
   "route_contacto": "/eu/kontaktua",
   "route_quienes_somos": "/eu/guri-buruz",
   "route_productos": "/eu/produktuak",

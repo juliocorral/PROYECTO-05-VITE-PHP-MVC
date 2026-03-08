@@ -1,6 +1,11 @@
 {
   "meta_title": "Legezko terminoak, pribatutasuna eta cookieak | Aginagako Okindegia",
-  "route_canonical": "/eu/legezko-terminoak",
+  "meta_description": "Aginagako Okindegiaren lege informazioa, pribatutasun politika eta cookien kudeaketa.",
+  "meta_og_locale": "eu_ES",
+  "meta_og_site_name": "Aginagako Okindegia",
+  "meta_twitter_card": "summary_large_image",
+  "meta_social_image": "/assets/img/logos/panaderia-aginaga-logo-original.jpg",
+  "meta_social_image_alt": "Aginagako Okindegiaren logotipoa",
   "route_inicio": "/eu",
   "hero_title": "Pribatutasunaren terminoak eta baldintzak eta cookien kudeaketa",
   "hero_logo_alt": "Aginagako Okindegiaren logotipoa",

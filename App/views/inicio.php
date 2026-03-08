@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,32 @@
     <?php echo vite_tags('src/js/inicio.js'); ?>
 
     <!-- Url de esta vista -->
-    <link rel="canonical" href="<?=$_ENV['RUTA'] . $data['route_canonical']?>">
+    <link rel="canonical" href="<?=$_ENV['RUTA']?><?= $url ?>">
 
     <!-- Indexación y autoridad-->
     <meta name="robots" data-lang="robots" content="nofollow, noindex">
     <meta name="referrer" content="origin">
 
+    <!-- Metadatos para redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="<?= $data['meta_og_locale'] ?>">
+    <meta property="og:site_name" content="<?= $data['meta_og_site_name'] ?>">
+    <meta property="og:title" content="<?= $data['meta_title'] ?>">
+    <meta property="og:description" content="<?= $data['meta_description'] ?>">
+    <meta property="og:url" content="<?=$_ENV['RUTA']?><?= $url ?>">
+    <meta property="og:image" content="<?=$_ENV['RUTA']?><?= $data['meta_social_image'] ?>">
+    <meta property="og:image:alt" content="<?= $data['meta_social_image_alt'] ?>">
+
+    <meta name="twitter:card" content="<?= $data['meta_twitter_card'] ?>">
+    <meta name="twitter:title" content="<?= $data['meta_title'] ?>">
+    <meta name="twitter:description" content="<?= $data['meta_description'] ?>">
+    <meta name="twitter:image" content="<?=$_ENV['RUTA']?><?= $data['meta_social_image'] ?>">
+    <meta name="twitter:image:alt" content="<?= $data['meta_social_image_alt'] ?>">
+
     <?php
     // Metadatos globales
     include $appRoot . '/includes/metadatos_globales.php'
     ?>
-
 </head>
 <body>
 
