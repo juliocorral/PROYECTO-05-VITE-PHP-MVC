@@ -1,9 +1,18 @@
 User-agent: *
 
-# No indexar archivos del sistema
+# Bloquear rutas internas o privadas
 Disallow: /app/
 Disallow: /vendor/
 Disallow: /README/
+Disallow: /es/zona-admin
+Disallow: /eu/admin-gunea
+Disallow: /es/registro
+Disallow: /eu/erregistroa
+Disallow: /es/logout
+Disallow: /eu/logout
+Disallow: /es/gracias
+Disallow: /eu/eskerrikasko
+Disallow: /es/showroom
 
-# Sitemap
-Sitemap: https://bbdd-profe.webda.eus/sitemap.xml
+# Sitemap principal
+Sitemap: https://julio-lab-mvc.webda.eus/sitemap.xml

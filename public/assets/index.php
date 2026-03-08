@@ -55,9 +55,6 @@ if ($method === 'POST') {
 }
 
 
-
-
-
 // Compruebo que $url no sea un "/", sino que sea otras url como "/es/contacto"
 if ($url != "/") {
     // quito la "/" del final en caso de que la tenga
@@ -95,9 +92,26 @@ if ($url != "/") {
 // FASE 3 - UNA VEZ TENEMOS LA $URL DEL USUARIO, Y TENEMOS EL IDIOMA DE LA URL EN $LANG, COMPROBAMOS SI EXISTE ESA URL EN ESE IDIOMA CONSULTANDO EL ARRAY DE URL
 if (isset($arrayRutasGet[$lang][$url])) {
 
+    // Si el idioma $lang y la url $url existen dentro del array de rutas permitidas, entonces cargamos la vista relacionada de los otros idiomas
+    $urlMultilang = getRutasEquivalentesPorIdioma($url, $arrayRutasGet);
+
+    // Imprime las rutas equivalentes en otros idiomas para esa url y ese idioma, por ejemplo: ["en" => "/en/contact", "fr" => "/fr/contact"]
+    // echo $urlMultilang['eu'];
+    // die;  
 
     // Si la url existe dentro del array de url's, entonces cogemos el valor de view, que es el archivo que haremos include para cargar el contenido pertienente de esta url.
     $view = $arrayRutasGet[$lang][$url]['view']; 
+
+    // Obtenemos tambien la carpeta del contenido para esa vista que estará en JSON por idioma, luego con esos valores del JSON se completarán las variable de textos de la vista.
+    $content = $arrayRutasGet[$lang][$url]['content']; 
+
+    // Cargamos las variables GLOBALES de idioma (includes)
+    $data = (array) json_decode(file_get_contents($appRoot . "/languajes/_global/$lang.json"), true);
+    $data && extract($data); // (Cortocircuito) Extraemos las variables del JSON para que estén disponibles en la vista
+
+     // Cargamos las variables de la VISTA de idioma
+    $data = (array) json_decode(file_get_contents($appRoot . "/languajes/$content/$lang.json"), true);
+    $data && extract($data); // (Cortocircuito) Extraemos las variables del JSON para que estén disponibles en la vista
      
     
     //----VISTA----------
@@ -115,8 +129,19 @@ if (isset($arrayRutasGet[$lang][$url])) {
     if (!in_array($lang, $langs)) {
         $lang = $_ENV['LANG_DEFAULT'];
     }
+    // Cargamos variables globales también para el 404 (nav/footer)
+    $data = (array) json_decode(file_get_contents($appRoot . "/languajes/_global/$lang.json"), true);
+    $data && extract($data);
+
+    // Cargamos variables de la vista 404
+    $notFoundLangFile = $appRoot . "/languajes/404/$lang.json";
+    if (is_file($notFoundLangFile)) {
+        $data = (array) json_decode(file_get_contents($notFoundLangFile), true);
+        $data && extract($data);
+    }
+
     http_response_code(404);
-    require_once $appRoot . "/views/$lang/404.php";
+    require_once $appRoot . "/views/404.php";
 
     /* 
     AQUÍ SE CARGARÁ TODO EL HTML DEL 404
