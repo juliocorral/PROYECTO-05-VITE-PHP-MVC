@@ -12,3 +12,7 @@
 2026-03-08 19:39:54 - Genera en la vista inicio.php en la zona de og y twitter los metadatos necesarios. Ten encuenta que deben estar variabilizados incluyendo la imagen.
 2026-03-08 19:46:25 - Haz lo mismo para el resto de vistas
 2026-03-08 21:42:13 - REvisa el robots.txt y el sitemap.xml para que sean correctos con respecto al stack actual
+2026-03-08 23:05:13 - El proyecto no está funcionando correctamente en producción los estilos no se cargan correctamente. Revisa el proyecto para encontrar que puede estar fallando. En desarrollo si se ve todo de manera correcta. NO cambies nada de código solo encuentra el problema y explicalo
+2026-03-08 23:11:41 - Soluciona el problema encontrado
+2026-03-08 23:22:32 - Revisa porque parece que cada vista no carga los archivos js y css que deberían mostrar las páginas bien en producción
+2026-03-08 23:27:43 - Soluciona esto

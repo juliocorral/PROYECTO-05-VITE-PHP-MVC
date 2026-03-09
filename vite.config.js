@@ -24,9 +24,9 @@ export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
 
   return {
-    // En dev usamos base "/" para que los módulos se sirvan desde la raíz.
-    // En build apuntamos a "/assets/" porque allí se publican los bundles.
-    base: isDev ? '/' : '/assets/',
+    // Usamos base "/" para evitar duplicar prefijos en URLs absolutas
+    // definidas dentro de los SCSS (por ejemplo "/assets/img/...").
+    base: '/',
     // Forzamos recarga completa cuando cambian archivos PHP (no hay HMR en PHP).
     plugins: [
       {
